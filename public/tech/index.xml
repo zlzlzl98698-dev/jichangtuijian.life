@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>专线网络与代理协议架构实验室 | 从物理海缆到现代加密 on 机场life | 42家主流专线机场权威评测与网络可观测性实验室</title>
+		<link>https://jichangtuijian.life/tech/</link>
+		<description>Recent content in 专线网络与代理协议架构实验室 | 从物理海缆到现代加密 on 机场life | 42家主流专线机场权威评测与网络可观测性实验室</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 09 Nov 2026 23:00:00 +0800</lastBuildDate>
+		
+			<atom:link href="https://jichangtuijian.life/tech/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>IPLC 与 IEPL 专线深度解析：跨境网络为何能做到晚高峰不拥堵？</title>
+				<link>https://jichangtuijian.life/tech/lines-topology/</link>
+				<pubDate>Mon, 09 Nov 2026 23:00:00 +0800</pubDate>
+				<guid>https://jichangtuijian.life/tech/lines-topology/</guid>
+				<description>&lt;h2 id=&#34;1-跨境网络瓶颈的根源公网国际出口与-gfw&#34;&gt;1. 跨境网络瓶颈的根源：公网国际出口与 GFW&lt;/h2&gt;&#xA;&lt;p&gt;当用户通过普通宽带访问海外服务器时，数据包必须经过省级骨干网汇聚，再进入位于北京、上海或广州的国家级公网国际交换中心。在每晚 20:00 - 23:00 的晚高峰时段，数十万用户同时发起海外连接，导致公网出口带宽超载，触发严厉的 QoS 限速和随机丢包。&lt;/p&gt;&#xA;&lt;h2 id=&#34;2-什么是-iplc-international-private-leased-circuit&#34;&gt;2. 什么是 IPLC (International Private Leased Circuit)？&lt;/h2&gt;&#xA;&lt;p&gt;IPLC 即&lt;strong&gt;国际私有租用线路&lt;/strong&gt;。它是由电信运营商（如中国电信 CN2、中国联通 CUG）在两地之间铺设的完全端到端点对点专有通信物理通道。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>代理协议演进史：从 Shadowsocks 到 VLESS Reality 与 Hysteria2</title>
+				<link>https://jichangtuijian.life/tech/protocols/</link>
+				<pubDate>Mon, 09 Nov 2026 23:00:00 +0800</pubDate>
+				<guid>https://jichangtuijian.life/tech/protocols/</guid>
+				<description>&lt;h2 id=&#34;1-代理协议的三代演进&#34;&gt;1. 代理协议的三代演进&lt;/h2&gt;&#xA;&lt;p&gt;网络代理协议在过去十余年中经历了从“简单对称加密”到“高仿真 TLS 伪装”，再到“基于 UDP 的魔改拥塞控制”三次重大代际跃迁：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;第一代：Shadowsocks / SSR&lt;/strong&gt; —— 基于 AEAD 密码原语的对称加密流。优点是轻量高效、服务器开销极小，目前依然广泛部署在专线机场（如 &lt;a href=&#34;https://jichangtuijian.life/brands/ermao/&#34;&gt;二猫云&lt;/a&gt;、&lt;a href=&#34;https://jichangtuijian.life/brands/weitu/&#34;&gt;唯兔云&lt;/a&gt;）内部，因为专线本身不经公网审查。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;第二代：Trojan / VLESS + TLS&lt;/strong&gt; —— 完全模拟正常 HTTPS 流量。客户端与服务端通过标准 TLS 1.3 握手，外部防火墙只能观察到合法的 SNI 域名握手数据。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;第三代：VLESS Reality &amp;amp; Hysteria2&lt;/strong&gt; —— Reality 实现了“借用他人合法证书”伪装，彻底杜绝了自签证书特征；而 Hysteria2 则基于 QUIC (UDP) 协议，在恶劣丢包环境下能暴力压榨带宽。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;2-协议特性全景对比&#34;&gt;2. 协议特性全景对比&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: left&#34;&gt;协议名称&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: left&#34;&gt;底层传输&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: center&#34;&gt;握手伪装度&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: center&#34;&gt;协议特征识别率&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: center&#34;&gt;CPU 运算开销&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: left&#34;&gt;最佳使用场景&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Shadowsocks (AEAD)&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;TCP&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;基础加密&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;中等 (公网易受阻)&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;极低&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;纯内网专线 (IEPL/IPLC)&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;VLESS + TLS&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;TCP / gRPC&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;极高 (真实证书)&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;极低&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;中等&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://jichangtuijian.life/brands/guangsu/&#34;&gt;光速云&lt;/a&gt; 旗舰综合型&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Trojan&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;TCP&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;极高 (伪装网站)&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;极低&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;中等&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;商务级抗封锁通道&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;Hysteria2 (QUIC)&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;UDP&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;伪装 HTTP/3&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;极低&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: center&#34;&gt;中高&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;弱网、高丢包跨境环境&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+			</item>
+	</channel>
+</rss>

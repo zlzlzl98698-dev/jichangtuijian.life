@@ -1,0 +1,67 @@
+baseURL = "https://jichangtuijian.life/"
+locale = "zh-cn"
+title = "机场life | 42家主流专线机场权威评测与网络可观测性实验室"
+hasCJKLanguage = true
+summaryLength = 140
+
+[pagination]
+pagerSize = 12
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+section = ["HTML", "RSS"]
+page = ["HTML"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "dracula"
+    lineNos = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.8
+  filename = "sitemap.xml"
+
+[params]
+  brandName = "机场life"
+  siteDomain = "jichangtuijian.life"
+  siteDescription = "独立网络可观测性评测中心。深入评测42家主流机场，基于真实IEPL/IPLC专线延迟、晚高峰吞吐与ChatGPT/流媒体解锁数据，提供客观权威的选型知识图谱。"
+  affNotice = "【合规与透明声明】本站测评包含推广链接。通过本站链接注册可能为实验室带来服务器维护佣金，绝不增加您的支付成本，亦不影响我们的实测数据与评级结论。"
+  topBrand = "光速云"
+  topBrandUrl = "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y"
+  topBrandCoupon = "AMM"
+  topBrandHighlight = "2020年稳定运营 · IEPL+内网专线 · VLESS协议 · 年付折合8元/月 · 晚高峰实测低抖动"
+
+[menu]
+  [[menu.main]]
+    identifier = "brands"
+    name = "🛸 机场评测库"
+    url = "/brands/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tech"
+    name = "⚡ 专线与协议架构"
+    url = "/tech/"
+    weight = 20
+  [[menu.main]]
+    identifier = "scenarios"
+    name = "🎯 场景出海方案"
+    url = "/scenarios/"
+    weight = 30
+  [[menu.main]]
+    identifier = "clients"
+    name = "💻 客户端配置大全"
+    url = "/clients/"
+    weight = 40
+  [[menu.main]]
+    identifier = "about"
+    name = "📊 可观测性与方法论"
+    url = "/methodology/"
+    weight = 50

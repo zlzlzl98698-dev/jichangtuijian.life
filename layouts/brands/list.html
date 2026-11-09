@@ -1,0 +1,82 @@
+{{ define "main" }}
+
+<div class="article-header" style="margin-bottom:2rem;">
+  <div class="article-breadcrumb">
+    <a href="/">首页</a> / <span>机场评测库</span>
+  </div>
+  <h1 class="article-title">{{ .Title | default "42家主流机场品牌性能评测库" }}</h1>
+  <p class="hero-desc">
+    基于真实测速抓包、晚高峰抖动监控及流媒体/AI 原生 IP 解锁审计，构建业界首个透明可验证的机场选型知识图谱。严禁编造任何虚假数据。
+  </p>
+</div>
+
+<!-- 筛选器 -->
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">全部 42 家收录品牌</button>
+  <button class="filter-btn" data-filter="measured">📸 具备测速/解锁实测图</button>
+  <button class="filter-btn" data-filter="iplc">⚡ IPLC/IEPL 纯专线</button>
+  <button class="filter-btn" data-filter="budget">💰 高性价比 (月付≤15元)</button>
+  <button class="filter-btn" data-filter="ai">🤖 AI / ChatGPT 优化</button>
+</div>
+
+<div class="brand-grid">
+  {{ range .Pages }}
+  <div class="brand-card" 
+       data-status="{{ .Params.dataStatus | default "vendor" }}" 
+       data-line="{{ .Params.lineType | default "" }}" 
+       data-price="{{ .Params.startingPriceNum | default 20 }}"
+       data-ai="{{ if .Params.aiUnlock }}true{{ else }}false{{ end }}">
+    
+    <div>
+      <div class="brand-card-header">
+        <div>
+          <span class="brand-rank">#{{ .Params.rank | default "评测" }}</span>
+          <h3 class="brand-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        </div>
+        <span class="status-badge {{ if eq .Params.dataStatus "measured" }}status-measured{{ else }}status-vendor{{ end }}">
+          {{ if eq .Params.dataStatus "measured" }}实测数据{{ else }}官方宣称{{ end }}
+        </span>
+      </div>
+
+      <div class="brand-meta-list">
+        <div>
+          <span class="meta-key">线路架构</span>
+          <span class="meta-val">{{ .Params.lineType | default "专线/隧道" }}</span>
+        </div>
+        <div>
+          <span class="meta-key">核心协议</span>
+          <span class="meta-val">{{ .Params.protocols | default "Shadowsocks/VLESS" }}</span>
+        </div>
+        <div>
+          <span class="meta-key">入门价格</span>
+          <span class="meta-val">{{ .Params.startingPrice | default "详见评测" }}</span>
+        </div>
+        <div>
+          <span class="meta-key">流媒体/AI</span>
+          <span class="meta-val">{{ .Params.streamingStatus | default "主流解锁" }}</span>
+        </div>
+      </div>
+
+      <p class="brand-desc-snippet">{{ .Description | default .Summary }}</p>
+    </div>
+
+    <div class="brand-card-footer">
+      <div class="footer-price">
+        {{ .Params.priceHighlight | default "高质选型" }}
+      </div>
+      <div class="footer-actions">
+        <a href="{{ .Permalink }}" class="btn-card-detail">万字测评</a>
+        {{ with .Params.affUrl }}
+        <a href="{{ . }}" target="_blank" rel="nofollow sponsored noopener" class="btn-card-aff">直达官网</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</div>
+
+<div class="prose" style="margin-top:3rem;background:var(--bg-card);padding:2rem;border-radius:12px;border:1px solid var(--border-color);">
+  {{ .Content }}
+</div>
+
+{{ end }}

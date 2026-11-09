@@ -1,0 +1,69 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ .Site.BaseURL }}#website",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "{{ .Site.Params.brandName }}",
+      "description": "{{ .Site.Params.siteDescription }}",
+      "inLanguage": "zh-CN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ .Permalink }}#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "{{ .Site.BaseURL }}"
+        }
+        {{ if not .IsHome }}
+        ,
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ .Section | default .Title }}",
+          "item": "{{ .Site.BaseURL }}{{ .Section }}/"
+        }
+        {{ if .IsPage }}
+        ,
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{ .Title }}",
+          "item": "{{ .Permalink }}"
+        }
+        {{ end }}
+        {{ end }}
+      ]
+    }
+    {{ if .IsPage }}
+    ,
+    {
+      "@type": "Article",
+      "@id": "{{ .Permalink }}#article",
+      "isPartOf": {
+        "@id": "{{ .Site.BaseURL }}#website"
+      },
+      "headline": "{{ .Title }}",
+      "description": "{{ .Description | default .Summary }}",
+      "mainEntityOfPage": "{{ .Permalink }}",
+      "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+      "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+      "author": {
+        "@type": "Organization",
+        "name": "{{ .Site.Params.brandName }} 可观测性实验室"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ .Site.Params.brandName }}",
+        "url": "{{ .Site.BaseURL }}"
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>

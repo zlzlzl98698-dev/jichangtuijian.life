@@ -1,0 +1,365 @@
+[{
+  "title": "ChatGPT 与 Claude 开发者专属节点选型与防风控避坑指南",
+  "permalink": "https://jichangtuijian.life/scenarios/ai-copilot/",
+  "summary": "1. 为什么 AI 大模型对代理节点极其敏感？ OpenAI (ChatGPT) 与 Anthropic (Claude) 采用了全球顶级的反爬与风控服务（如 Cloudflare Turnstile、Kasada、DataDome）。这些风控系统会实时监控：\nIP 归属类型：数据中心机房 IP (Hosting) 极易被标记，而住宅带宽 IP (Residential / ISP) 享有最高信任等级； 并发请求密度：万人共用节点会产生巨大的同 IP 异常请求激增，导致整段 IP 被拉黑； 地理区域合规：OpenAI 官方从未向香港提供直接服务，使用香港节点访问必遭 1020 拒绝或账号封停。 2. 避免 AI 报错的核心配置三法则 绝对避开香港节点：在客户端（如 Clash Verge Rev）的分流规则中，强制将 openai.com、anthropic.com、oaistatic.com 等域名分流至美国西海岸（洛杉矶/西雅图）、日本或新加坡节点。 优先选用专线原生 IP：如 光速云 提供的美西与亚太原生节点，通过了 Claude 与 ChatGPT 4o 的严格握手探测。 开启防止 DNS 泄漏：在客户端开启 Secure DNS (DoH / DoT)，杜绝本地运营商 DNS 污染返回真实中国 IP。 ",
+  "section": "scenarios",
+  "date": "2026-11-09",
+  "tags": []
+},{
+  "title": "Clash Verge Rev 完整实操教程：Mihomo 内核跨平台标杆",
+  "permalink": "https://jichangtuijian.life/clients/clash-verge/",
+  "summary": "随着旧版 Clash for Windows 项目的停止维护，由社区活跃维护的 Clash Verge Rev 凭借现代化 Tauri 架构与强大的 Mihomo (Clash.Meta) 内核，已成为桌面端公认的最佳接任者。\n核心配置四步走 下载安装：前往官方 GitHub Release 页面下载对应版本（Windows 用户选 x64-setup.exe，Mac M系列选 aarch64.dmg）； 导入订阅：点击左侧「订阅」➔ 将机场提供的订阅地址粘贴至上方输入框 ➔ 点击「保存并导入」； 选择节点：切换至「代理」面板，展开策略组，按延迟自动测速（点击闪电图标），选择低延迟的 IEPL 专线节点； 系统代理：点击左侧「设置」，打开「系统代理」开关，即可畅享高速出海网络。 ",
+  "section": "clients",
+  "date": "2026-11-09",
+  "tags": []
+},{
+  "title": "iOS 与 Android 移动端分流配置与电量优化全攻略",
+  "permalink": "https://jichangtuijian.life/clients/mobile/",
+  "summary": "1. iOS 端：小火箭 (Shadowrocket) 最佳实践 在美区 App Store 购买安装 Shadowrocket（售价 2.99 美元）后：\n复制机场提供的专属订阅链接（如 光速云 后台一键复制）； 打开小火箭，点击右上角 + ➔ 类型选择 Subscribe ➔ 粘贴 URL 并保存； 全局路由模式务必选择 配置 (Rule)，避免选择“代理 (Proxy)”导致访问国内应用（微信、美团）浪费专线流量。 2. Android 端：解决后台被系统杀死的技巧 在小米 MIUI/HyperOS、华为 HarmonyOS 或 OPPO/VIVO 设备上使用 v2rayNG 时：\n",
+  "section": "clients",
+  "date": "2026-11-09",
+  "tags": []
+},{
+  "title": "IPLC 与 IEPL 专线深度解析：跨境网络为何能做到晚高峰不拥堵？",
+  "permalink": "https://jichangtuijian.life/tech/lines-topology/",
+  "summary": "1. 跨境网络瓶颈的根源：公网国际出口与 GFW 当用户通过普通宽带访问海外服务器时，数据包必须经过省级骨干网汇聚，再进入位于北京、上海或广州的国家级公网国际交换中心。在每晚 20:00 - 23:00 的晚高峰时段，数十万用户同时发起海外连接，导致公网出口带宽超载，触发严厉的 QoS 限速和随机丢包。\n2. 什么是 IPLC (International Private Leased Circuit)？ IPLC 即国际私有租用线路。它是由电信运营商（如中国电信 CN2、中国联通 CUG）在两地之间铺设的完全端到端点对点专有通信物理通道。\n",
+  "section": "tech",
+  "date": "2026-11-09",
+  "tags": []
+},{
+  "title": "Shadowrocket (小火箭) 完整配置指南：iOS 首选出海神器",
+  "permalink": "https://jichangtuijian.life/clients/shadowrocket/",
+  "summary": "在 iOS 生态中，Shadowrocket（俗称小火箭） 因其稳定高效、价格亲民（2.99美元）且功能强大，常年位居工具类下载榜前列。\n新手极速配置指引 准备外区 Apple ID：由于大陆 App Store 下架，需准备一个美区或港区 Apple ID 进行购买下载； 添加订阅：登录您的机场服务商后台（如 光速云），找到「一键导入小火箭」；或手动复制订阅链接后打开小火箭，软件会自动弹出识别弹窗，点击保存； 启用连接：首次点击顶部连接开关时，iOS 系统会弹出“添加 VPN 配置”授权框，通过 Face ID 或密码确认即可启动连接。 ",
+  "section": "clients",
+  "date": "2026-11-09",
+  "tags": []
+},{
+  "title": "v2rayN Windows 进阶实操手册：多内核、多协议与批量测试",
+  "permalink": "https://jichangtuijian.life/clients/v2rayn/",
+  "summary": "v2rayN 是 Windows 平台经典成熟的轻量代理客户端，深受极客与多协议用户推崇。\n核心进阶功能解析 多内核自由切换：支持 Xray-core、sing-box-core、mihomo-core 等多种现代内核； 批量 Ping 与真连接测试：快捷键 Ctrl + R 可对数百个节点进行真实网页请求延迟测速，自动过滤失效与超时节点； 丰富的路由自定义：支持基于 GeoIP 与 GeoSite 数据库的高级分流，实现广告拦截、国内直连与外网加速。 ",
+  "section": "clients",
+  "date": "2026-11-09",
+  "tags": []
+},{
+  "title": "Windows 与 macOS 桌面端代理客户端深度配置与 TUN 模式详解",
+  "permalink": "https://jichangtuijian.life/clients/desktop/",
+  "summary": "1. 桌面端的核心痛点：系统代理与终端失效 很多用户在电脑上开启代理软件后，发现浏览器能打开网页，但 Git 命令行、Python 包下载、Docker 容器或 Steam 游戏却依然无法联网。这是因为传统“系统代理”仅对支持 HTTP 代理的浏览器生效。\n2. 终极解决方案：开启 TUN 模式 (虚拟网卡) TUN (Network Tunnel) 模式 会在操作系统中虚拟一张网卡，在网络层（L3）接管整台电脑的全部 IP 数据包。\n",
+  "section": "clients",
+  "date": "2026-11-09",
+  "tags": []
+},{
+  "title": "代理协议演进史：从 Shadowsocks 到 VLESS Reality 与 Hysteria2",
+  "permalink": "https://jichangtuijian.life/tech/protocols/",
+  "summary": "1. 代理协议的三代演进 网络代理协议在过去十余年中经历了从“简单对称加密”到“高仿真 TLS 伪装”，再到“基于 UDP 的魔改拥塞控制”三次重大代际跃迁：\n第一代：Shadowsocks / SSR —— 基于 AEAD 密码原语的对称加密流。优点是轻量高效、服务器开销极小，目前依然广泛部署在专线机场（如 二猫云、唯兔云）内部，因为专线本身不经公网审查。 第二代：Trojan / VLESS + TLS —— 完全模拟正常 HTTPS 流量。客户端与服务端通过标准 TLS 1.3 握手，外部防火墙只能观察到合法的 SNI 域名握手数据。 第三代：VLESS Reality \u0026amp; Hysteria2 —— Reality 实现了“借用他人合法证书”伪装，彻底杜绝了自签证书特征；而 Hysteria2 则基于 QUIC (UDP) 协议，在恶劣丢包环境下能暴力压榨带宽。 2. 协议特性全景对比 协议名称 底层传输 握手伪装度 协议特征识别率 CPU 运算开销 最佳使用场景 Shadowsocks (AEAD) TCP 基础加密 中等 (公网易受阻) 极低 纯内网专线 (IEPL/IPLC) VLESS + TLS TCP / gRPC 极高 (真实证书) 极低 中等 光速云 旗舰综合型 Trojan TCP 极高 (伪装网站) 极低 中等 商务级抗封锁通道 Hysteria2 (QUIC) UDP 伪装 HTTP/3 极低 中高 弱网、高丢包跨境环境 ",
+  "section": "tech",
+  "date": "2026-11-09",
+  "tags": []
+},{
+  "title": "机场可观测性实验室评测方法论与数据合规白皮书",
+  "permalink": "https://jichangtuijian.life/methodology/",
+  "summary": "1. 我们的使命：建立可验证的行业可观测性标准 出海与跨境网络行业长期充斥着大量虚假宣传、跑路隐患以及毫无技术依据的“恰饭排行榜”。机场life (jichangtuijian.life) 旨在通过严谨的网络工程可观测性方法，为出海从业者、开发者与跨境外贸团队提供可复现、可验证的真实参考数据。\n2. 评测硬件与网络测试环境 境内发起端：电信 1000M 商业光纤 + 联通 500M 宽带双接入环境，配置物理万兆路由器； 测试时间窗口：重点采集每日 20:00 - 23:00 晚高峰核心时段的链路表现； 探测指标： RTT 往返时延：通过 TCP / TLS Ping 测量端到端真实握手时延； 单线程与多线程吞吐：基于国际主流 CDN 与 Speedtest 边缘节点压测下载带宽； 丢包抖动率 (Packet Loss \u0026amp; Jitter)：通过连续 100 次 ICMP/TCP 心跳监测骨干网抖动。 3. 严格的数据状态分级 (Data Provenance) 为了维护权威度与公信力，本站对所有展示信息严格标注数据来源：\n",
+  "section": "",
+  "date": "2026-11-09",
+  "tags": []
+},{
+  "title": "跨境电商独立站与全球流媒体 4K 解锁网络环境全解",
+  "permalink": "https://jichangtuijian.life/scenarios/ecommerce-streaming/",
+  "summary": "1. 跨境电商业务的核心痛点：网络环境关联 Shopify、Amazon、PayPal 及 TikTok 跨境店铺对登录环境有严格的防关联判定。如果多个卖家共用同一个脏机房 IP 登录后台，极易导致店铺连带冻结。\n解决方案：使用稳定专线机场提供的独享固定节点或定制原生 IP 方案（如 光速云定制套餐），结合防关联指纹浏览器（如 AdsPower、Hubstudio）。 2. 流媒体 4K 播放的硬件与带宽指标 在 YouTube 观看 4K 60fps 甚至 8K 视频，单个连接需要持续稳定的 35 Mbps - 50 Mbps 下行吞吐，且连接缓冲（Connection Speed）在播放初期需迅速爬升至 80,000 Kbps 以上。基于 飞猫云、微风网络 的专线优化节点可轻松胜任这一任务。\n",
+  "section": "scenarios",
+  "date": "2026-11-09",
+  "tags": []
+},{
+  "title": "CyberGuard怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/cyberguard/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) CyberGuard 在本站 42 家机场评测知识库中综合排名 第 29 位。\n核心定位：IEPL 企业级专线； 入门成本：最低入门价格为 ¥25/月 起； 专属优惠权益：结账时输入专属优惠码 CG888 可享受折扣减免； 协议兼容性：支持 Trojan / VLESS，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：面向技术极客与海外工程师的专线服务，节点质量高。 2. 价格体系与套餐档位横评 CyberGuard 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","CyberGuard","IEPL","科学上网","出海选型"]
+},{
+  "title": "EdgeNova怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/edgenova/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) EdgeNova 在本站 42 家机场评测知识库中综合排名 第 40 位。\n核心定位：高速直连 / IPLC； 入门成本：最低入门价格为 ¥15/月 (72GB)； 专属优惠权益：结账时输入专属优惠码 TH888 可享受折扣减免； 协议兼容性：支持 Shadowsocks / Trojan，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：高速直连与IPLC多线路自动分配，提供年付小包与新用户8折优惠。 2. 价格体系与套餐档位横评 EdgeNova 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","EdgeNova","高速直连","科学上网","出海选型"]
+},{
+  "title": "FATCAT怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/fatcat/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) FATCAT 在本站 42 家机场评测知识库中综合排名 第 34 位。\n核心定位：专线出口； 入门成本：最低入门价格为 ¥22/月 起； 专属优惠权益：结账时输入专属优惠码 fc888 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：老牌机场之一，节点池深厚，抗封锁能力较强。 2. 价格体系与套餐档位横评 FATCAT 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","FATCAT","专线出口","科学上网","出海选型"]
+},{
+  "title": "Firefly怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/firefly/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) Firefly 在本站 42 家机场评测知识库中综合排名 第 10 位。\n核心定位：IPLC 纯专线 + VLESS； 入门成本：最低入门价格为 ¥96/年 (折合¥8/月)； 专属优惠权益：结账时输入专属优惠码 firefly 可享受折扣减免； 协议兼容性：支持 VLESS / Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：主推 IPLC 纯专线与 VLESS 架构，国内免翻墙直接访问官网，新用户 8 折，原生 IP 支持主流 AI 工具。 2. 价格体系与套餐档位横评 Firefly 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","Firefly","IPLC","科学上网","出海选型"]
+},{
+  "title": "FlyingBird怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/flyingbird/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) FlyingBird 在本站 42 家机场评测知识库中综合排名 第 32 位。\n核心定位：IEPL 专线； 入门成本：最低入门价格为 ¥20/月 起； 专属优惠权益：结账时输入专属优惠码 fb666 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：知名专线品牌，节点延迟低，晚高峰稳定性有口碑。 2. 价格体系与套餐档位横评 FlyingBird 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","FlyingBird","IEPL","科学上网","出海选型"]
+},{
+  "title": "SOGO云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/sogo/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) SOGO云 在本站 42 家机场评测知识库中综合排名 第 17 位。\n核心定位：中转优化线路； 入门成本：最低入门价格为 ¥15/月 起； 专属优惠权益：结账时输入专属优惠码 sss777 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：2026年新锐品牌，主打低延迟与新节点不拥堵，实测速率优秀。 2. 价格体系与套餐档位横评 SOGO云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","SOGO云","中转优化线路","科学上网","出海选型"]
+},{
+  "title": "sslar怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/sslar/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) sslar 在本站 42 家机场评测知识库中综合排名 第 42 位。\n核心定位：企业级 IEPL + 多线 BGP； 入门成本：最低入门价格为 ¥17/月 (100GB)； 专属优惠权益：结账时输入专属优惠码 ko3eTt0w 可享受折扣减免； 协议兼容性：支持 Shadowsocks / VLESS，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：企业级IEPL与多线BGP自适应，自研多端客户端并支持远程桌面协助。 2. 价格体系与套餐档位横评 sslar 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","sslar","企业级","科学上网","出海选型"]
+},{
+  "title": "TNTCloud怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/tntcloud/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) TNTCloud 在本站 42 家机场评测知识库中综合排名 第 35 位。\n核心定位：高速中转； 入门成本：最低入门价格为 ¥18/月 起； 专属优惠权益：结账时输入专属优惠码 tnt888 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：中端性能平衡型机场，适合轻办公与流媒体观看。 2. 价格体系与套餐档位横评 TNTCloud 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","TNTCloud","高速中转","科学上网","出海选型"]
+},{
+  "title": "U1S1怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/u1s1/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) U1S1 在本站 42 家机场评测知识库中综合排名 第 12 位。\n核心定位：标准专线中转； 入门成本：最低入门价格为 ¥20/月 (120GB)； 专属优惠权益：结账时输入专属优惠码 akaka 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：20元120GB经典标准方案，实测下载速度峰值可达 70MB/s 以上，性价比扎实。 2. 价格体系与套餐档位横评 U1S1 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","U1S1","标准专线中转","科学上网","出海选型"]
+},{
+  "title": "WgetCloud怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/wgetcloud/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) WgetCloud 在本站 42 家机场评测知识库中综合排名 第 30 位。\n核心定位：高端企业级专线； 入门成本：最低入门价格为 ¥297/季 (230GB/月)； 专属优惠权益：结账时输入专属优惠码 无公开优惠码 可享受折扣减免； 协议兼容性：支持 Trojan / Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：行业知名高端老牌机场，全节点优质专线，59节点平均下载在50MB/s以上，主打高可用商务。 2. 价格体系与套餐档位横评 WgetCloud 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","WgetCloud","高端企业级专线","科学上网","出海选型"]
+},{
+  "title": "一翻云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/yifan/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 一翻云 在本站 42 家机场评测知识库中综合排名 第 16 位。\n核心定位：BGP 智能中转； 入门成本：最低入门价格为 ¥20/月 (150GB)； 专属优惠权益：结账时输入专属优惠码 yfy6666 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：20元150GB大带宽套餐，测速实测中香港与日本节点表现亮眼。 2. 价格体系与套餐档位横评 一翻云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","一翻云","BGP","科学上网","出海选型"]
+},{
+  "title": "二猫云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/ermao/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 二猫云 在本站 42 家机场评测知识库中综合排名 第 7 位。\n核心定位：双线 BGP + IPLC 专线； 入门成本：最低入门价格为 ¥20/月 (130GB)； 专属优惠权益：结账时输入专属优惠码 ermao5555 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：主打高稳定性的中端专线机场，20元档包含130GB流量，实测节点可用率达100%，晚高峰看4K视频流畅。 2. 价格体系与套餐档位横评 二猫云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","二猫云","双线","科学上网","出海选型"]
+},{
+  "title": "云界线怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/yunjiexian/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 云界线 在本站 42 家机场评测知识库中综合排名 第 23 位。\n核心定位：经济型中转； 入门成本：最低入门价格为 ¥5.6/月 (60GB)； 专属优惠权益：结账时输入专属优惠码 yjx888 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：平价梯队，适合低预算应急或多设备备用。 2. 价格体系与套餐档位横评 云界线 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","云界线","经济型中转","科学上网","出海选型"]
+},{
+  "title": "光年梯怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/guangnian/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 光年梯 在本站 42 家机场评测知识库中综合排名 第 15 位。\n核心定位：专线中转； 入门成本：最低入门价格为 ¥18/月 (110GB)； 专属优惠权益：结账时输入专属优惠码 gnt6666 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：18元110GB均衡配比，晚高峰连通性高，测速表现稳定。 2. 价格体系与套餐档位横评 光年梯 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","光年梯","专线中转","科学上网","出海选型"]
+},{
+  "title": "光速云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/guangsu/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 光速云 在本站 42 家机场评测知识库中综合排名 第 1 位。\n核心定位：IEPL专线 + 企业级内网专线（双线路架构）； 入门成本：最低入门价格为 ¥8/月 (年付折合)； 专属优惠权益：结账时输入专属优惠码 AMM 可享受折扣减免； 协议兼容性：支持 VLESS / Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：2020年起稳定运营的综合型旗舰专线机场。主打 IEPL 与企业内网双专线架构，延迟极低且晚高峰不卡顿。独家斯诺克147永久不过期套餐，年付轻量折合仅8元/月，综合性价比与技术体验排名全网第一。 2. 价格体系与套餐档位横评 光速云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","光速云","IEPL专线","科学上网","出海选型"]
+},{
+  "title": "全球云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/quanqiu/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 全球云 在本站 42 家机场评测知识库中综合排名 第 21 位。\n核心定位：全球多节点中转； 入门成本：最低入门价格为 ¥15/月 起； 专属优惠权益：结账时输入专属优惠码 qqy7777 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：2026年新品牌，测速覆盖亚太主流地区，下载速率达标。 2. 价格体系与套餐档位横评 全球云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","全球云","全球多节点中转","科学上网","出海选型"]
+},{
+  "title": "可信云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/kexin/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 可信云 在本站 42 家机场评测知识库中综合排名 第 18 位。\n核心定位：标准隧道中转； 入门成本：最低入门价格为 ¥16/月 起； 专属优惠权益：结账时输入专属优惠码 kkk333 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：官方诚实标注数据缺口，中立客观，测速可用率较高。 2. 价格体系与套餐档位横评 可信云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","可信云","标准隧道中转","科学上网","出海选型"]
+},{
+  "title": "唯兔云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/weitu/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 唯兔云 在本站 42 家机场评测知识库中综合排名 第 9 位。\n核心定位：三网优化 + 智能负载均衡专线； 入门成本：最低入门价格为 ¥18/月 起； 专属优惠权益：结账时输入专属优惠码 weitu666 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：拥有 60+ 优质节点，针对电信、联通、移动三网进行智能负载均衡调度，抗封锁与抗网络波动能力优秀。 2. 价格体系与套餐档位横评 唯兔云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","唯兔云","三网优化","科学上网","出海选型"]
+},{
+  "title": "大佬云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/dalaoyun/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 大佬云 在本站 42 家机场评测知识库中综合排名 第 5 位。\n核心定位：高密BGP中转专线； 入门成本：最低入门价格为 ¥5.6/月 (60GB)； 专属优惠权益：结账时输入专属优惠码 dly888 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：极低门槛的平民级机场，最低月付仅5.6元享60GB，是备用梯子与轻量浏览外网资料的高性价比选择。 2. 价格体系与套餐档位横评 大佬云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","大佬云","高密BGP中转专线","科学上网","出海选型"]
+},{
+  "title": "宇宙云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/yuzhou/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 宇宙云 在本站 42 家机场评测知识库中综合排名 第 11 位。\n核心定位：IEPL + VLESS 专线； 入门成本：最低入门价格为 ¥18/月 起； 专属优惠权益：结账时输入专属优惠码 YUZHOU553 可享受折扣减免； 协议兼容性：支持 VLESS，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：采用 IEPL + VLESS 架构并配备自研客户端，节点延迟均衡，实测晚高峰丢包率低。 2. 价格体系与套餐档位横评 宇宙云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","宇宙云","IEPL","科学上网","出海选型"]
+},{
+  "title": "山水云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/shanshuiyun/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 山水云 在本站 42 家机场评测知识库中综合排名 第 37 位。\n核心定位：多地区中转； 入门成本：最低入门价格为 ¥15/月 (100GB)； 专属优惠权益：结账时输入专属优惠码 待核实 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：月付入门15元100GB，轻量年付88元，历史测试美区下载达 22.5MB/s。 2. 价格体系与套餐档位横评 山水云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","山水云","多地区中转","科学上网","出海选型"]
+},{
+  "title": "微风网络怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/weifeng/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 微风网络 在本站 42 家机场评测知识库中综合排名 第 4 位。\n核心定位：IEPL 内网专线； 入门成本：最低入门价格为 ¥7/月 (年付折合)； 专属优惠权益：结账时输入专属优惠码 flat888 可享受折扣减免； 协议兼容性：支持 Shadowsocks / VLESS，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：老牌专线代表，7元档高性价比，全IEPL内网专线架构，配合新用户9折优惠码，网络延迟表现平稳，丢包率极低。 2. 价格体系与套餐档位横评 微风网络 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","微风网络","IEPL","科学上网","出海选型"]
+},{
+  "title": "无忧链接怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/wuyou/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 无忧链接 在本站 42 家机场评测知识库中综合排名 第 8 位。\n核心定位：直连优化 + 专线中转； 入门成本：最低入门价格为 ¥6/月 (轻量套餐)； 专属优惠权益：结账时输入专属优惠码 wuyou666 可享受折扣减免； 协议兼容性：支持 Shadowsocks / VLESS，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：订阅链接原生兼容主流客户端无需转换，6元轻量起步套餐对学生和新手极为友好。 2. 价格体系与套餐档位横评 无忧链接 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","无忧链接","直连优化","科学上网","出海选型"]
+},{
+  "title": "星岛梦怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/xingdaomeng/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 星岛梦 在本站 42 家机场评测知识库中综合排名 第 6 位。\n核心定位：企业级 IPLC 专线； 入门成本：最低入门价格为 ¥15/月 起； 专属优惠权益：结账时输入专属优惠码 nmw888 可享受折扣减免； 协议兼容性：支持 Shadowsocks / Trojan，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：2020年开业老牌专线，提供常规月付与不限时大容量流量包，长期不关服口碑良好，测速性能扎实。 2. 价格体系与套餐档位横评 星岛梦 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","星岛梦","企业级","科学上网","出海选型"]
+},{
+  "title": "暮光加速怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/muguang/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 暮光加速 在本站 42 家机场评测知识库中综合排名 第 2 位。\n核心定位：BGP 智能调度 + 专线级出口； 入门成本：最低入门价格为 ¥20/月 (120GB)； 专属优惠权益：结账时输入专属优惠码 muguang5555 可享受折扣减免； 协议兼容性：支持 Shadowsocks / VLESS，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：2023年运营的多设备协同型专线机场。主打 BGP 智能调度和专线级低延迟出口，提供 7×24 小时真人客服支持，多设备同时在线无压力，非常适合远程团队与多终端用户。 2. 价格体系与套餐档位横评 暮光加速 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","暮光加速","BGP","科学上网","出海选型"]
+},{
+  "title": "极连云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/jilian/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 极连云 在本站 42 家机场评测知识库中综合排名 第 14 位。\n核心定位：IEPL 优化专线； 入门成本：最低入门价格为 ¥18/月 (100GB)； 专属优惠权益：结账时输入专属优惠码 ji8888 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：18元100GB，实测节点覆盖亚洲核心区，品牌资料强调覆盖 AI 大模型工具访问。 2. 价格体系与套餐档位横评 极连云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","极连云","IEPL","科学上网","出海选型"]
+},{
+  "title": "梯子云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/tiziyun/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 梯子云 在本站 42 家机场评测知识库中综合排名 第 28 位。\n核心定位：专线优化； 入门成本：最低入门价格为 ¥22/月 起； 专属优惠权益：结账时输入专属优惠码 tiziyun 可享受折扣减免； 协议兼容性：支持 Shadowsocks / Trojan，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：自研全平台客户端一键登录，同时支持第三方通用订阅导入。 2. 价格体系与套餐档位横评 梯子云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","梯子云","专线优化","科学上网","出海选型"]
+},{
+  "title": "榴莲云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/liulianyun/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 榴莲云 在本站 42 家机场评测知识库中综合排名 第 24 位。\n核心定位：经济型中转； 入门成本：最低入门价格为 ¥5.6/月 (60GB)； 专属优惠权益：结账时输入专属优惠码 ll88 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：超轻量低单价方案，适合查资料与文字通信。 2. 价格体系与套餐档位横评 榴莲云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","榴莲云","经济型中转","科学上网","出海选型"]
+},{
+  "title": "浪网怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/langwang/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 浪网 在本站 42 家机场评测知识库中综合排名 第 39 位。\n核心定位：IEPL 专线； 入门成本：最低入门价格为 ¥30/月 (150GB)； 专属优惠权益：结账时输入专属优惠码 待核实 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：IEPL专线定位，覆盖入门、进阶、高端商业套餐与定制线路。 2. 价格体系与套餐档位横评 浪网 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","浪网","IEPL","科学上网","出海选型"]
+},{
+  "title": "灵动云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/lingdongyun/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 灵动云 在本站 42 家机场评测知识库中综合排名 第 38 位。\n核心定位：IEPL + VLESS 专线； 入门成本：最低入门价格为 ¥20/月 (100GB)； 专属优惠权益：结账时输入专属优惠码 待核实 可享受折扣减免； 协议兼容性：支持 VLESS，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：2025年开业专线，全节点VLESS，OpenAI各地区解锁良好，提供单次流量包。 2. 价格体系与套餐档位横评 灵动云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","灵动云","IEPL","科学上网","出海选型"]
+},{
+  "title": "灵猫网络怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/lingmao/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 灵猫网络 在本站 42 家机场评测知识库中综合排名 第 13 位。\n核心定位：BGP 中转专线； 入门成本：最低入门价格为 ¥19/月 (150GB)； 专属优惠权益：结账时输入专属优惠码 lmao888 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：19元150GB大流量套餐，且提供不限时不过期流量包，灵活性突出。 2. 价格体系与套餐档位横评 灵猫网络 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","灵猫网络","BGP","科学上网","出海选型"]
+},{
+  "title": "环球梯怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/huanqiuti/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 环球梯 在本站 42 家机场评测知识库中综合排名 第 26 位。\n核心定位：经济型中转； 入门成本：最低入门价格为 ¥5.6/月 (60GB)； 专属优惠权益：结账时输入专属优惠码 HQ66 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：入门价格亲民，适合备用与备选。 2. 价格体系与套餐档位横评 环球梯 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","环球梯","经济型中转","科学上网","出海选型"]
+},{
+  "title": "白月光怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/baiyueguang/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 白月光 在本站 42 家机场评测知识库中综合排名 第 31 位。\n核心定位：专线隧道； 入门成本：最低入门价格为 ¥18/月 起； 专属优惠权益：结账时输入专属优惠码 byg888 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：平稳中端专线，主打影音流媒体解锁与长周期稳定性。 2. 价格体系与套餐档位横评 白月光 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","白月光","专线隧道","科学上网","出海选型"]
+},{
+  "title": "神行加速怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/shenxing/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 神行加速 在本站 42 家机场评测知识库中综合排名 第 25 位。\n核心定位：BGP 智能中转； 入门成本：最低入门价格为 ¥14/月 (120GB)； 专属优惠权益：结账时输入专属优惠码 xs0077 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：14元享120GB，性价比梯度合理，适合中度出海需求。 2. 价格体系与套餐档位横评 神行加速 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","神行加速","BGP","科学上网","出海选型"]
+},{
+  "title": "萤火虫怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/yinghuochong/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 萤火虫 在本站 42 家机场评测知识库中综合排名 第 41 位。\n核心定位：IPLC + VLESS； 入门成本：最低入门价格为 ¥96/年 (60GB/月)； 专属优惠权益：结账时输入专属优惠码 firefly 可享受折扣减免； 协议兼容性：支持 VLESS，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：IPLC+VLESS原生IP定位，不限速不限设备，支持主流AI工具。 2. 价格体系与套餐档位横评 萤火虫 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","萤火虫","IPLC","科学上网","出海选型"]
+},{
+  "title": "速界怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/sujie/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 速界 在本站 42 家机场评测知识库中综合排名 第 19 位。\n核心定位：专线优化； 入门成本：最低入门价格为 ¥18/月 起； 专属优惠权益：结账时输入专属优惠码 sss1111 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：品牌资料特别针对 AI 工具交互优化，实测连通率稳定。 2. 价格体系与套餐档位横评 速界 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","速界","专线优化","科学上网","出海选型"]
+},{
+  "title": "闪电鼠怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/shandianshu/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 闪电鼠 在本站 42 家机场评测知识库中综合排名 第 22 位。\n核心定位：经济型中转； 入门成本：最低入门价格为 ¥5.6/月 (60GB)； 专属优惠权益：结账时输入专属优惠码 sd88 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：5.6元超低月付，轻度浏览备用良选。 2. 价格体系与套餐档位横评 闪电鼠 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","闪电鼠","经济型中转","科学上网","出海选型"]
+},{
+  "title": "闪跃怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/shanyue/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 闪跃 在本站 42 家机场评测知识库中综合排名 第 20 位。\n核心定位：IPLC 专线； 入门成本：最低入门价格为 ¥24/月 (150GB)； 专属优惠权益：结账时输入专属优惠码 shanyue 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：24元150GB，中高端专线定位，节点带宽充足。 2. 价格体系与套餐档位横评 闪跃 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","闪跃","IPLC","科学上网","出海选型"]
+},{
+  "title": "隐形人怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/yinxingren/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 隐形人 在本站 42 家机场评测知识库中综合排名 第 27 位。\n核心定位：专线私有接入； 入门成本：最低入门价格为 ¥25/月 起； 专属优惠权益：结账时输入专属优惠码 yxr888 可享受折扣减免； 协议兼容性：支持 自研专有协议，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：60+节点详细清单，提供自研客户端与快速修复机制，不提供第三方通用订阅。 2. 价格体系与套餐档位横评 隐形人 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","隐形人","专线私有接入","科学上网","出海选型"]
+},{
+  "title": "青云梯怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/qingyunti/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 青云梯 在本站 42 家机场评测知识库中综合排名 第 36 位。\n核心定位：企业级 IPLC 专线； 入门成本：最低入门价格为 ¥96/年 (折合¥8/月)； 专属优惠权益：结账时输入专属优惠码 qyt80 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：运营6年以上老牌（原V4Speed），SS+企业级IPLC三网优化，支持企业定制。 2. 价格体系与套餐档位横评 青云梯 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","青云梯","企业级","科学上网","出海选型"]
+},{
+  "title": "飞猫云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/feimao/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 飞猫云 在本站 42 家机场评测知识库中综合排名 第 3 位。\n核心定位：高速中转 + 专线出口； 入门成本：最低入门价格为 ¥7/月 (年付折合)； 专属优惠权益：结账时输入专属优惠码 flycat888 可享受折扣减免； 协议兼容性：支持 Shadowsocks / Trojan，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：主打轻快连接与新手免配置体验的专线机场。提供专属客户端，下载登录即用无需手动导入订阅，学生版年付仅84元折合7元/月，新手入门首选。 2. 价格体系与套餐档位横评 飞猫云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","飞猫云","高速中转","科学上网","出海选型"]
+},{
+  "title": "龙猫云怎么样？2026最新评测、测速数据与选型优缺点深度报告",
+  "permalink": "https://jichangtuijian.life/brands/longmaoyun/",
+  "summary": "1. 核心选型结论与综合审计摘要 (Executive Summary) 龙猫云 在本站 42 家机场评测知识库中综合排名 第 33 位。\n核心定位：BGP 中转； 入门成本：最低入门价格为 ¥15/月 起； 专属优惠权益：结账时输入专属优惠码 lm888 可享受折扣减免； 协议兼容性：支持 Shadowsocks，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端； 整体评价结论：性价比中转梯队，节点丰富，适合日常浏览与追剧。 2. 价格体系与套餐档位横评 龙猫云 针对不同用户场景设计了多梯度的订阅方案：\n",
+  "section": "brands",
+  "date": "2026-10-19",
+  "tags": ["机场评测","龙猫云","BGP","科学上网","出海选型"]
+}]

@@ -1,0 +1,138 @@
+[
+  {
+    "platform": "Windows 电脑端",
+    "platformSlug": "windows",
+    "clients": [
+      {
+        "name": "Clash Verge Rev",
+        "kernel": "Mihomo (Clash.Meta)",
+        "features": "订阅管理、规则分流、TUN 虚拟网卡模式、脚本控制",
+        "level": "新手及进阶首选",
+        "site": "https://github.com/clash-verge-rev/clash-verge-rev"
+      },
+      {
+        "name": "v2rayN",
+        "kernel": "Xray / sing-box",
+        "features": "多协议兼容 (VLESS/VMess/Trojan/SS)、节点延迟批量压测",
+        "level": "多协议极客首选",
+        "site": "https://github.com/2dust/v2rayN"
+      },
+      {
+        "name": "FlClash",
+        "kernel": "Mihomo",
+        "features": "简洁极简界面、跨平台一致体验、智能分流",
+        "level": "极简日常用户",
+        "site": "https://github.com/chen08209/FlClash"
+      },
+      {
+        "name": "Hiddify",
+        "kernel": "sing-box",
+        "features": "自动节点选择、全协议多格式订阅兼容、零配置",
+        "level": "小白一键上手",
+        "site": "https://github.com/hiddify/hiddify-next"
+      },
+      {
+        "name": "Karing",
+        "kernel": "sing-box",
+        "features": "多配置源整合、分流规则可视化编辑",
+        "level": "规则分流用户",
+        "site": "https://karing.app"
+      }
+    ]
+  },
+  {
+    "platform": "Android 安卓手机端",
+    "platformSlug": "android",
+    "clients": [
+      {
+        "name": "v2rayNG",
+        "kernel": "Xray",
+        "features": "广泛的协议支持、扫码导入订阅、稳定省电后台常驻",
+        "level": "安卓主流首选",
+        "site": "https://github.com/2dust/v2rayNG"
+      },
+      {
+        "name": "FlClash",
+        "kernel": "Mihomo",
+        "features": "规则代理、UI现代化设计、分应用代理",
+        "level": "现代体验首选",
+        "site": "https://github.com/chen08209/FlClash"
+      },
+      {
+        "name": "Hiddify Next",
+        "kernel": "sing-box",
+        "features": "全协议兼容、自动智能优选、一键开启",
+        "level": "零门槛新手",
+        "site": "https://github.com/hiddify/hiddify-next"
+      },
+      {
+        "name": "Karing",
+        "kernel": "sing-box",
+        "features": "跨平台订阅支持、精细化分流控制",
+        "level": "进阶用户",
+        "site": "https://karing.app"
+      }
+    ]
+  },
+  {
+    "platform": "iPhone / iPad (iOS)",
+    "platformSlug": "ios",
+    "clients": [
+      {
+        "name": "Shadowrocket (小火箭)",
+        "kernel": "自研高性能内核",
+        "features": "App Store 付费工具、深度规则分流、脚本支持、场景模式",
+        "level": "iOS 人手必备",
+        "site": "https://apps.apple.com"
+      },
+      {
+        "name": "Stash",
+        "kernel": "Mihomo 兼容",
+        "features": "Clash 规则与配置文件兼容、策略组覆盖、网络调试",
+        "level": "iOS 进阶首选",
+        "site": "https://apps.apple.com"
+      },
+      {
+        "name": "Quantumult X (圈X)",
+        "kernel": "自研网络内核",
+        "features": "强大脚本重写、MitM 解密、精细网络策略",
+        "level": "高玩技术极客",
+        "site": "https://apps.apple.com"
+      },
+      {
+        "name": "Sing-box for iOS (SFI)",
+        "kernel": "sing-box 官方",
+        "features": "原生 sing-box 架构、现代轻量、低功耗",
+        "level": "开源爱好者",
+        "site": "https://sing-box.sagernet.org"
+      }
+    ]
+  },
+  {
+    "platform": "macOS 苹果电脑端",
+    "platformSlug": "macos",
+    "clients": [
+      {
+        "name": "Clash Verge Rev (Mac)",
+        "kernel": "Mihomo",
+        "features": "原生 Apple Silicon / Intel 双架构支持、系统代理与 TUN 模式",
+        "level": "Mac 桌面端标杆",
+        "site": "https://github.com/clash-verge-rev/clash-verge-rev"
+      },
+      {
+        "name": "Surge 5 for Mac",
+        "kernel": "Surge 自研引擎",
+        "features": "企业级网络调试、数据包捕获、多出口负载",
+        "level": "高端开发者必备",
+        "site": "https://nssurge.com"
+      },
+      {
+        "name": "FlClash (Mac)",
+        "kernel": "Mihomo",
+        "features": "轻量优雅、快捷菜单栏控制",
+        "level": "轻量办公",
+        "site": "https://github.com/chen08209/FlClash"
+      }
+    ]
+  }
+]

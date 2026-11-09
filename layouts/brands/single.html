@@ -1,0 +1,139 @@
+{{ define "main" }}
+
+<div class="article-wrapper">
+  <article class="article-content">
+    <div class="article-header">
+      <div class="article-breadcrumb">
+        <a href="/">首页</a> / <a href="/brands/">机场评测库</a> / <span>{{ .Title }}</span>
+      </div>
+      <h1 class="article-title">{{ .Title }}</h1>
+      <div class="article-meta">
+        <span>⏱️ 运营年限：{{ .Params.operationalSince | default "2023年" }}</span>
+        <span>⚡ 线路类型：{{ .Params.lineType | default "IEPL专线" }}</span>
+        <span>🏷️ 协议支持：{{ .Params.protocols | default "Shadowsocks / VLESS" }}</span>
+        <span>🛡️ 样本状态：<strong style="color:{{ if eq .Params.dataStatus "measured" }}#34d399{{ else }}#fbbf24{{ end }};">{{ if eq .Params.dataStatus "measured" }}实测样本 (Measured){{ else }}官方宣称 (Vendor Data){{ end }}</strong></span>
+        <span>📅 核验日期：{{ .Params.verifiedDate | default "2026-10" }}</span>
+      </div>
+    </div>
+
+    <!-- 顶部可观测性卡片 Top Observatory Snapshot -->
+    <div class="observatory-box">
+      <div class="observatory-box-header">
+        <span>INFRASTRUCTURE SNAPSHOT // {{ .Title }}</span>
+        <span>STATUS: {{ if eq .Params.dataStatus "measured" }}MEASURED & VERIFIED{{ else }}VENDOR SPECIFICATION{{ end }}</span>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin-bottom:1.25rem;">
+        <div>
+          <span style="color:var(--text-dim);font-size:0.78rem;">入门价格梯队</span>
+          <div style="font-size:1.25rem;font-weight:700;color:var(--accent-green);">{{ .Params.startingPrice | default "¥20/月起" }}</div>
+        </div>
+        <div>
+          <span style="color:var(--text-dim);font-size:0.78rem;">专属优惠码</span>
+          <div style="font-size:1.15rem;font-weight:700;color:var(--accent-amber);" class="coupon-pill" data-coupon="{{ .Params.couponCode | default "" }}">
+            {{ if .Params.couponCode }}{{ .Params.couponCode }} (点击复制){{ else }}无公开优惠码{{ end }}
+          </div>
+        </div>
+        <div>
+          <span style="color:var(--text-dim);font-size:0.78rem;">节点覆盖地区</span>
+          <div style="font-size:1.05rem;font-weight:600;color:#fff;">{{ .Params.regionCoverage | default "港/台/日/新/美主流地区" }}</div>
+        </div>
+        <div>
+          <span style="color:var(--text-dim);font-size:0.78rem;">AI / 流媒体表现</span>
+          <div style="font-size:1.05rem;font-weight:600;color:#38bdf8;">{{ .Params.streamingStatus | default "全主流解锁" }}</div>
+        </div>
+      </div>
+
+      {{ with .Params.affUrl }}
+      <div style="border-top:1px solid #1e2c45;padding-top:1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+        <span style="font-size:0.8rem;color:var(--text-dim);">
+          * 推广链接经合规配置，通过本链接访问官网注册可享受官方最新活动优惠
+        </span>
+        <a href="{{ . }}" target="_blank" rel="nofollow sponsored noopener" class="btn-card-aff" style="padding:0.6rem 1.25rem;font-size:0.95rem;">
+          前往 {{ $.Title }} 官方注册入口 ➔
+        </a>
+      </div>
+      {{ end }}
+    </div>
+
+    <!-- 正文内容 (Markdown渲染) -->
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    <!-- 底部蜂巢内链区块 Honeycomb Matrix -->
+    <div class="honeycomb-section">
+      <h3 style="color:#fff;font-size:1.2rem;margin-bottom:0.5rem;">🔗 关联评测与协同选型知识图谱</h3>
+      <p style="font-size:0.85rem;color:var(--text-dim);">
+        根据当前品牌的协议架构与节点定位，我们为您推荐以下关联度极高的横向评测与技术专题：
+      </p>
+
+      <div class="honeycomb-grid">
+        <div class="honeycomb-card">
+          <div style="font-size:0.75rem;color:var(--accent-cyan);font-family:var(--font-mono);">⭐ 综合旗舰首选</div>
+          <div class="honeycomb-title"><a href="/brands/guangsu/">光速云深度实测</a></div>
+          <p style="font-size:0.8rem;color:var(--text-dim);">2020年运营，IEPL+内网双专线，折合8元/月起，晚高峰低抖动。</p>
+        </div>
+        <div class="honeycomb-card">
+          <div style="font-size:0.75rem;color:var(--accent-cyan);font-family:var(--font-mono);">⚡ 专线底层原理解析</div>
+          <div class="honeycomb-title"><a href="/tech/lines-topology/">IPLC vs IEPL 物理拓扑</a></div>
+          <p style="font-size:0.8rem;color:var(--text-dim);">跨境专线为何不惧晚高峰封锁与丢包？技术原理彻底拆解。</p>
+        </div>
+        <div class="honeycomb-card">
+          <div style="font-size:0.75rem;color:var(--accent-cyan);font-family:var(--font-mono);">💻 客户端进阶教程</div>
+          <div class="honeycomb-title"><a href="/clients/clash-verge/">Clash Verge Rev 避坑指南</a></div>
+          <p style="font-size:0.8rem;color:var(--text-dim);">Mihomo 内核、TUN 虚拟网卡与分流规则最佳实践。</p>
+        </div>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- 侧边栏 Sidebar -->
+  <aside class="sidebar-wrapper">
+    <!-- 专属转化卡 -->
+    {{ with .Params.affUrl }}
+    <div class="sidebar-widget" style="border-color:#2b4975;background:linear-gradient(180deg,#0e1b30,#121a2d);">
+      <div class="widget-title" style="color:var(--accent-cyan);">🚀 官方直达通道</div>
+      <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1rem;">
+        订阅前建议先购买小额月付套餐，实测本地运营商晚高峰表现后再长周期续费。
+      </p>
+      {{ if $.Params.couponCode }}
+      <div class="coupon-pill" style="width:100%;text-align:center;margin-bottom:0.75rem;" data-coupon="{{ $.Params.couponCode }}">
+        优惠码: <strong>{{ $.Params.couponCode }}</strong>
+      </div>
+      {{ end }}
+      <a href="{{ . }}" target="_blank" rel="nofollow sponsored noopener" class="btn-cta" style="font-size:0.9rem;padding:0.6rem;">
+        直达 {{ $.Title }} 官网 ➔
+      </a>
+    </div>
+    {{ end }}
+
+    <!-- 目录导航 TOC -->
+    <div class="sidebar-widget">
+      <div class="widget-title">📑 评测章节导航</div>
+      <div class="toc-list">
+        {{ .TableOfContents }}
+      </div>
+    </div>
+
+    <!-- 品牌库快速直达 -->
+    <div class="sidebar-widget">
+      <div class="widget-title">🌐 核心品牌梯队</div>
+      <ul style="list-style:none;font-size:0.85rem;line-height:2;">
+        <li><a href="/brands/guangsu/">01. 光速云 (主推旗舰)</a></li>
+        <li><a href="/brands/muguang/">02. 暮光加速</a></li>
+        <li><a href="/brands/feimao/">03. 飞猫云</a></li>
+        <li><a href="/brands/weifeng/">04. 微风网络</a></li>
+        <li><a href="/brands/dalaoyun/">05. 大佬云</a></li>
+        <li><a href="/brands/xingdaomeng/">06. 星岛梦</a></li>
+        <li><a href="/brands/ermao/">07. 二猫云</a></li>
+        <li><a href="/brands/wuyou/">08. 无忧链接</a></li>
+        <li><a href="/brands/weitu/">09. 唯兔云</a></li>
+        <li><a href="/brands/firefly/">10. Firefly 萤火虫</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+{{ end }}

@@ -1,0 +1,78 @@
+{{ define "main" }}
+
+<div class="article-wrapper">
+  <article class="article-content">
+    <div class="article-header">
+      <div class="article-breadcrumb">
+        <a href="/">首页</a> / <a href="/{{ .Section }}/">{{ .Section | humanize }}</a> / <span>{{ .Title }}</span>
+      </div>
+      <h1 class="article-title">{{ .Title }}</h1>
+      <div class="article-meta">
+        <span>📅 发布时间：{{ .Date.Format "2006-01-02" }}</span>
+        <span>⏱️ 阅读时间：约 {{ .ReadingTime }} 分钟</span>
+        <span>🏷️ 架构专栏：{{ .Section }}</span>
+      </div>
+    </div>
+
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    <!-- 底部主推转化模块 -->
+    <div style="margin-top:3rem;background:linear-gradient(145deg,#0e1b30,#132442);border:1px solid #2b4975;border-radius:10px;padding:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;">
+      <div>
+        <div style="color:var(--accent-cyan);font-weight:700;font-size:1.1rem;margin-bottom:0.25rem;">⚡ 需要稳定低延迟的专线机场？</div>
+        <div style="font-size:0.88rem;color:var(--text-muted);">
+          光速云：2020年运营，双线路 IEPL+企业内网，折合仅 8 元/月起，晚高峰实测低抖动。专属优惠码：<strong>AMM</strong>
+        </div>
+      </div>
+      <a href="https://sahude.gsyvipaff.com/#/?code=keqgvT5Y" target="_blank" rel="nofollow sponsored noopener" class="btn-cta" style="width:auto;padding:0.6rem 1.5rem;">
+        前往光速云官网 ➔
+      </a>
+    </div>
+
+    <!-- 蜂巢内链推荐 -->
+    <div class="honeycomb-section">
+      <h3 style="color:#fff;font-size:1.15rem;margin-bottom:0.5rem;">🔗 关联探索矩阵</h3>
+      <div class="honeycomb-grid">
+        <div class="honeycomb-card">
+          <div class="honeycomb-title"><a href="/brands/">42家机场品牌总库</a></div>
+          <p style="font-size:0.8rem;color:var(--text-dim);">全网 42 家机场价格、节点与实测数据横向对比。</p>
+        </div>
+        <div class="honeycomb-card">
+          <div class="honeycomb-title"><a href="/tech/">专线网络与协议深度解析</a></div>
+          <p style="font-size:0.8rem;color:var(--text-dim);">剖析 IPLC/IEPL 与现代代理协议的技术抗封锁原理。</p>
+        </div>
+        <div class="honeycomb-card">
+          <div class="honeycomb-title"><a href="/clients/">客户端下载与配置大全</a></div>
+          <p style="font-size:0.8rem;color:var(--text-dim);">Windows/macOS/iOS/Android 全平台客户端实操教程。</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <aside class="sidebar-wrapper">
+    <!-- 侧边栏转化卡 -->
+    <div class="sidebar-widget" style="border-color:#2b4975;background:linear-gradient(180deg,#0e1b30,#121a2d);">
+      <div class="widget-title" style="color:var(--accent-cyan);">⭐ 实验室旗舰主推</div>
+      <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;">
+        <strong>光速云</strong>：IEPL+企业内网双专线，支持 VLESS 协议，全流媒体与 AI 工具原生解锁。
+      </p>
+      <div class="coupon-pill" style="width:100%;text-align:center;margin-bottom:0.75rem;" data-coupon="AMM">
+        优惠码: <strong>AMM</strong>
+      </div>
+      <a href="https://sahude.gsyvipaff.com/#/?code=keqgvT5Y" target="_blank" rel="nofollow sponsored noopener" class="btn-cta" style="font-size:0.9rem;padding:0.6rem;">
+        直达光速云官网 ➔
+      </a>
+    </div>
+
+    <div class="sidebar-widget">
+      <div class="widget-title">📑 目录导航</div>
+      <div class="toc-list">
+        {{ .TableOfContents }}
+      </div>
+    </div>
+  </aside>
+</div>
+
+{{ end }}

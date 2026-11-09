@@ -1,0 +1,61 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-compliance-box">
+      <strong>⚖️ 评测合规性与佣金透明声明：</strong>
+      {{ .Site.Params.affNotice }}
+      本站所有速度与解锁指标均注明「实测数据（Measured Data）」或「品牌官方宣称（Vendor Data）」，力求提供具备可验证性、中立客观的选型知识图谱。
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>{{ .Site.Params.brandName }} LABS</h4>
+        <p class="footer-brand-desc">{{ .Site.Params.siteDescription }}</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>评测与技术矩阵</h4>
+        <ul>
+          <li><a href="/brands/">42家机场品牌总库</a></li>
+          <li><a href="/brands/guangsu/">光速云旗舰深度评测</a></li>
+          <li><a href="/tech/">专线与协议架构解析</a></li>
+          <li><a href="/scenarios/">AI与跨境外贸方案</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>客户端下载与教程</h4>
+        <ul>
+          <li><a href="/clients/">全平台代理客户端大全</a></li>
+          <li><a href="/clients/clash-verge/">Clash Verge Rev 配置指南</a></li>
+          <li><a href="/clients/shadowrocket/">Shadowrocket 小火箭教程</a></li>
+          <li><a href="/clients/v2rayn/">v2rayN Windows 进阶实操</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>关于与方法论</h4>
+        <ul>
+          <li><a href="/methodology/">评测标准与可观测性体系</a></li>
+          <li><a href="/sitemap.xml">网站地图 Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; {{ now.Format "2006" }} {{ .Site.Params.siteDomain }} - 机场life 保留所有权利。</div>
+      <div style="color:var(--text-dim);">Infrastructure Monitoring Engine · Hugo Extended</div>
+    </div>
+  </div>
+</footer>
+
+<!-- 搜索弹窗 -->
+<div class="search-modal" id="search-modal">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <span style="font-size:1.2rem;">🔍</span>
+      <input type="text" id="search-input" class="search-input" placeholder="输入机场名称、协议（如VLESS）、流媒体或使用场景..." autocomplete="off">
+      <button id="search-close" style="background:none;border:none;color:var(--text-muted);font-size:1.2rem;cursor:pointer;">✕</button>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>

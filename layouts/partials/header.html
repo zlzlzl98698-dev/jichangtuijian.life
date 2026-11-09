@@ -1,0 +1,33 @@
+<div class="top-notice-bar">
+  <span class="status-indicator"></span>
+  <span><strong>网络可观测性状态</strong>：全网 42 家机场测速采样数据与流媒体/AI 解锁状态正常同步更新中</span>
+</div>
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="/" class="logo-area">
+      <span>{{ .Site.Params.brandName }}</span>
+      <span class="logo-badge">LABS</span>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL }}" class="{{ if or (eq $.RelPermalink .URL) (hasPrefix $.RelPermalink .URL) }}active{{ end }}">
+            {{ .Name }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="search-trigger" id="search-trigger">
+        <span>🔍</span>
+        <span>搜索全网评测</span>
+        <kbd style="background:rgba(255,255,255,0.1);padding:1px 4px;border-radius:3px;font-size:0.75rem;">Ctrl K</kbd>
+      </button>
+    </div>
+  </div>
+</header>
