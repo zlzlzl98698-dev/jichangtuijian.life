@@ -41,27 +41,47 @@ page = ["HTML"]
 
 [menu]
   [[menu.main]]
-    identifier = "brands"
-    name = "🛸 机场评测库"
-    url = "/brands/"
+    identifier = "matrix"
+    name = "🏆 42家矩阵"
+    url = "/matrix/"
     weight = 10
   [[menu.main]]
-    identifier = "tech"
-    name = "⚡ 专线与协议架构"
-    url = "/tech/"
+    identifier = "trials"
+    name = "🎁 免费试用"
+    url = "/trials/"
     weight = 20
   [[menu.main]]
-    identifier = "scenarios"
-    name = "🎯 场景出海方案"
-    url = "/scenarios/"
+    identifier = "free-nodes"
+    name = "🆓 免费节点"
+    url = "/free-nodes/"
     weight = 30
   [[menu.main]]
-    identifier = "clients"
-    name = "💻 客户端配置大全"
-    url = "/clients/"
+    identifier = "warnings"
+    name = "🚨 跑路预警"
+    url = "/warnings/"
     weight = 40
   [[menu.main]]
-    identifier = "about"
-    name = "📊 可观测性与方法论"
-    url = "/methodology/"
+    identifier = "faq"
+    name = "❓ 机场FAQ"
+    url = "/faq/"
     weight = 50
+  [[menu.main]]
+    identifier = "brands"
+    name = "🛸 品牌库"
+    url = "/brands/"
+    weight = 60
+  [[menu.main]]
+    identifier = "tech"
+    name = "⚡ 专线协议"
+    url = "/tech/"
+    weight = 70
+  [[menu.main]]
+    identifier = "clients"
+    name = "💻 客户端"
+    url = "/clients/"
+    weight = 80
+  [[menu.main]]
+    identifier = "about"
+    name = "📊 白皮书"
+    url = "/methodology/"
+    weight = 90
