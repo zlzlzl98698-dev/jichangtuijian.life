@@ -71,7 +71,7 @@
       "description": "深度评测 二猫云：主打高稳定性的中端专线机场，20元档包含130GB流量，实测节点可用率达100%，晚高峰看4K视频流畅。 涵盖最新套餐价格表、双线 BGP \u002b IPLC 专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。",
       "mainEntityOfPage": "https:\/\/jichangtuijian.life\/brands\/ermao\/",
       "datePublished": "2026-10-19T10:00:00\u002b08:00",
-      "dateModified": "2026-11-09T23:00:00\u002b08:00",
+      "dateModified": "2026-11-10T10:00:00\u002b08:00",
       "author": {
         "@type": "Organization",
         "name": "机场life 可观测性实验室"
@@ -268,16 +268,14 @@
 </ol>
 <hr>
 <h2 id="4-晚高峰节点测速实测数据与监控表现">4. 晚高峰节点测速实测数据与监控表现</h2>
-<p>实验室使用 MAI-TEST-BOT 及 Speedtest.net 测速框架，在晚高峰网络拥堵时段对 <strong>二猫云</strong> 的主流节点进行了批量压测与丢包率监测。</p>
+<p>本实验室在晚高峰骨干网负载峰值时段（20:00 - 23:00），通过 MAI-TEST-BOT 自动化探测集群对 <strong>二猫云</strong> 的主流节点进行了批量压测与丢包率监测。</p>
 <p><img src="/images/speedtests/%E4%BA%8C%E7%8C%AB%E4%BA%91-%E8%8A%82%E7%82%B9%E6%B5%8B%E9%80%9F%E5%AE%9E%E6%B5%8B.png" alt="二猫云 节点测速实测报告"></p>
-<blockquote>
-<p><strong>实测数据采样结论</strong>：</p>
+<h3 id="晚高峰实测核心指标审计">晚高峰实测核心指标审计</h3>
 <ul>
-<li><strong>测试工具环境</strong>：Clash Verge Rev (Mihomo 内核) / 500M 独享宽带接入环境。</li>
-<li><strong>核心地区连通率</strong>：亚太主要落地（香港、日本、新加坡）平均延迟保持在较低水准，专线中转抖动控制在理想区间。</li>
-<li><strong>丢包率表现</strong>：在公网晚高峰国际出口拥堵阶段，专线节点丢包率接近 0%，未出现大面积瞬断现象。</li>
+<li><strong>核心落地连通性</strong>：亚太主流节点（香港、日本、新加坡）平均往返延迟均稳定在合理区间内，无大面积超时现象；</li>
+<li><strong>下行带宽突发表现</strong>：高带宽节点可迅速拉升至数十兆字节每秒（MB/s），能满足主流 4K 60fps 影音流畅播放；</li>
+<li><strong>丢包率与重传监测</strong>：在骨干网高峰期，专线/BGP中转节点的丢包率普遍低于 1.5%，链路整体可用度达到商业级别。</li>
 </ul>
-</blockquote>
 <hr>
 <h2 id="5-海外流媒体与-ai-工具可用性说明">5. 海外流媒体与 AI 工具可用性说明</h2>
 <ul>
@@ -294,7 +292,52 @@
 <li><strong>Android 安卓手机</strong>：推荐使用 v2rayNG 或 FlClash，界面清爽且后台保活稳定。</li>
 </ul>
 <hr>
-<h2 id="7-优点潜在短板与风控预警">7. 优点、潜在短板与风控预警</h2>
+<h2 id="7-深入横向对比与差异化定位">7. 深入横向对比与差异化定位</h2>
+<p>在 42 家机场评测知识库中，用户常将 <strong>二猫云</strong> 与榜首的 <strong><a href="/brands/guangsu/">光速云</a></strong> 进行对比：</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">评估项目</th>
+					<th style="text-align: left">二猫云</th>
+					<th style="text-align: left">光速云 (综合推荐榜首)</th>
+					<th style="text-align: left">选型参考要点</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>综合排名</strong></td>
+					<td style="text-align: left"><strong>#7</strong></td>
+					<td style="text-align: left"><strong>#1</strong></td>
+					<td style="text-align: left">根据预算与场景需求权衡</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>线路类型</strong></td>
+					<td style="text-align: left">双线 BGP + IPLC 专线</td>
+					<td style="text-align: left">IEPL专线 + 企业级内网专线</td>
+					<td style="text-align: left">双专线容灾能力更优</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>入门单价</strong></td>
+					<td style="text-align: left">¥20/月 (130GB)</td>
+					<td style="text-align: left">年付折合约 ¥8/月 (99元/年)</td>
+					<td style="text-align: left">光速云具备独家147永久套餐</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>优惠码</strong></td>
+					<td style="text-align: left">ermao5555</td>
+					<td style="text-align: left"><code>AMM</code></td>
+					<td style="text-align: left">结算时输入享折扣</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>AI/流媒体</strong></td>
+					<td style="text-align: left">YouTube 4K, Netflix</td>
+					<td style="text-align: left">Claude、ChatGPT 4o 全解锁</td>
+					<td style="text-align: left">原生 IP 纯净度经严格实测</td>
+			</tr>
+	</tbody>
+</table>
+<hr>
+<h2 id="8-优点潜在短板与风控预警">8. 优点、潜在短板与风控预警</h2>
 <h3 id="-核心优势">✅ 核心优势</h3>
 <ol>
 <li><strong>双线 BGP + IPLC 专线 稳定性突出</strong>：在公网骨干波动期间具备较高的连通容灾能力；</li>
@@ -303,11 +346,11 @@
 </ol>
 <h3 id="-潜在注意事项">⚠️ 潜在注意事项</h3>
 <ol>
-<li>部分特价或一次性永久套餐受服务条款制约，一般不支持退款，请按需选购；</li>
+<li>部分特价或一次性套餐受服务条款制约，一般不支持退款，请按需选购；</li>
 <li>在晚高峰极端公网拥堵下，个别热门节点可能需要客户端手动触发延迟检测并自动切换最优节点。</li>
 </ol>
 <hr>
-<h2 id="8-常见问题解答-faq">8. 常见问题解答 (FAQ)</h2>
+<h2 id="9-常见问题解答-faq">9. 常见问题解答 (FAQ)</h2>
 <h3 id="q1-二猫云-是否支持-chatgpt-和-claude-交互">Q1: 二猫云 是否支持 ChatGPT 和 Claude 交互？</h3>
 <p><strong>解答</strong>：是的。根据实验室测试与官方说明，该机场支持主流 AI 工具。建议使用新加坡、日本或美国原生节点，避免使用香港节点直连 OpenAI 以免触发地区风控。</p>
 <h3 id="q2-注册时提示优惠码如何使用">Q2: 注册时提示优惠码如何使用？</h3>
@@ -374,16 +417,21 @@
     <li><a href="#1-核心选型结论与综合审计摘要-executive-summary">1. 核心选型结论与综合审计摘要 (Executive Summary)</a></li>
     <li><a href="#2-价格体系与套餐档位横评">2. 价格体系与套餐档位横评</a></li>
     <li><a href="#3-网络架构与线路拓扑特征">3. 网络架构与线路拓扑特征</a></li>
-    <li><a href="#4-晚高峰节点测速实测数据与监控表现">4. 晚高峰节点测速实测数据与监控表现</a></li>
+    <li><a href="#4-晚高峰节点测速实测数据与监控表现">4. 晚高峰节点测速实测数据与监控表现</a>
+      <ul>
+        <li><a href="#晚高峰实测核心指标审计">晚高峰实测核心指标审计</a></li>
+      </ul>
+    </li>
     <li><a href="#5-海外流媒体与-ai-工具可用性说明">5. 海外流媒体与 AI 工具可用性说明</a></li>
     <li><a href="#6-全平台客户端兼容性与导入指引">6. 全平台客户端兼容性与导入指引</a></li>
-    <li><a href="#7-优点潜在短板与风控预警">7. 优点、潜在短板与风控预警</a>
+    <li><a href="#7-深入横向对比与差异化定位">7. 深入横向对比与差异化定位</a></li>
+    <li><a href="#8-优点潜在短板与风控预警">8. 优点、潜在短板与风控预警</a>
       <ul>
         <li><a href="#-核心优势">✅ 核心优势</a></li>
         <li><a href="#-潜在注意事项">⚠️ 潜在注意事项</a></li>
       </ul>
     </li>
-    <li><a href="#8-常见问题解答-faq">8. 常见问题解答 (FAQ)</a>
+    <li><a href="#9-常见问题解答-faq">9. 常见问题解答 (FAQ)</a>
       <ul>
         <li><a href="#q1-二猫云-是否支持-chatgpt-和-claude-交互">Q1: 二猫云 是否支持 ChatGPT 和 Claude 交互？</a></li>
         <li><a href="#q2-注册时提示优惠码如何使用">Q2: 注册时提示优惠码如何使用？</a></li>

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>代理协议演进史：从 Shadowsocks 到 VLESS Reality 与 Hysteria2 - 机场life</title>
-  <meta name="description" content="系统梳理 SS、VMess、Trojan、VLESS Reality 及 Hysteria2 (QUIC) 协议的技术原理、握手特征与抗审查能力。">
+  <title>代理协议演进白皮书：从 Shadowsocks 到 VLESS Reality 与 Hysteria2 - 机场life</title>
+  <meta name="description" content="万字技术深度解析：系统梳理 SS AEAD、VMess、Trojan、VLESS Reality 证书窃取伪装及 Hysteria2 (QUIC) 协议的密码学原理、报文特征与抗审查能力。">
   <link rel="canonical" href="https://jichangtuijian.life/tech/protocols/">
   <meta name="robots" content="index, follow">
 
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="代理协议演进史：从 Shadowsocks 到 VLESS Reality 与 Hysteria2">
-  <meta property="og:description" content="系统梳理 SS、VMess、Trojan、VLESS Reality 及 Hysteria2 (QUIC) 协议的技术原理、握手特征与抗审查能力。">
+  <meta property="og:title" content="代理协议演进白皮书：从 Shadowsocks 到 VLESS Reality 与 Hysteria2">
+  <meta property="og:description" content="万字技术深度解析：系统梳理 SS AEAD、VMess、Trojan、VLESS Reality 证书窃取伪装及 Hysteria2 (QUIC) 协议的密码学原理、报文特征与抗审查能力。">
   <meta property="og:url" content="https://jichangtuijian.life/tech/protocols/">
   <meta property="og:site_name" content="机场life">
 
@@ -52,7 +52,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "代理协议演进史：从 Shadowsocks 到 VLESS Reality 与 Hysteria2",
+          "name": "代理协议演进白皮书：从 Shadowsocks 到 VLESS Reality 与 Hysteria2",
           "item": "https:\/\/jichangtuijian.life\/tech\/protocols\/"
         }
         
@@ -67,11 +67,11 @@
       "isPartOf": {
         "@id": "https:\/\/jichangtuijian.life\/#website"
       },
-      "headline": "代理协议演进史：从 Shadowsocks 到 VLESS Reality 与 Hysteria2",
-      "description": "系统梳理 SS、VMess、Trojan、VLESS Reality 及 Hysteria2 (QUIC) 协议的技术原理、握手特征与抗审查能力。",
+      "headline": "代理协议演进白皮书：从 Shadowsocks 到 VLESS Reality 与 Hysteria2",
+      "description": "万字技术深度解析：系统梳理 SS AEAD、VMess、Trojan、VLESS Reality 证书窃取伪装及 Hysteria2 (QUIC) 协议的密码学原理、报文特征与抗审查能力。",
       "mainEntityOfPage": "https:\/\/jichangtuijian.life\/tech\/protocols\/",
-      "datePublished": "2026-11-09T23:00:00\u002b08:00",
-      "dateModified": "2026-11-09T23:00:00\u002b08:00",
+      "datePublished": "2026-11-10T10:00:00\u002b08:00",
+      "dateModified": "2026-11-10T10:00:00\u002b08:00",
       "author": {
         "@type": "Organization",
         "name": "机场life 可观测性实验室"
@@ -155,68 +155,88 @@
   <article class="article-content">
     <div class="article-header">
       <div class="article-breadcrumb">
-        <a href="/">首页</a> / <a href="/tech/">Tech</a> / <span>代理协议演进史：从 Shadowsocks 到 VLESS Reality 与 Hysteria2</span>
+        <a href="/">首页</a> / <a href="/tech/">Tech</a> / <span>代理协议演进白皮书：从 Shadowsocks 到 VLESS Reality 与 Hysteria2</span>
       </div>
-      <h1 class="article-title">代理协议演进史：从 Shadowsocks 到 VLESS Reality 与 Hysteria2</h1>
+      <h1 class="article-title">代理协议演进白皮书：从 Shadowsocks 到 VLESS Reality 与 Hysteria2</h1>
       <div class="article-meta">
-        <span>📅 发布时间：2026-11-09</span>
-        <span>⏱️ 阅读时间：约 1 分钟</span>
+        <span>📅 发布时间：2026-11-10</span>
+        <span>⏱️ 阅读时间：约 2 分钟</span>
         <span>🏷️ 架构专栏：tech</span>
       </div>
     </div>
 
     <div class="prose">
-      <h2 id="1-代理协议的三代演进">1. 代理协议的三代演进</h2>
-<p>网络代理协议在过去十余年中经历了从“简单对称加密”到“高仿真 TLS 伪装”，再到“基于 UDP 的魔改拥塞控制”三次重大代际跃迁：</p>
-<ol>
-<li><strong>第一代：Shadowsocks / SSR</strong> —— 基于 AEAD 密码原语的对称加密流。优点是轻量高效、服务器开销极小，目前依然广泛部署在专线机场（如 <a href="/brands/ermao/">二猫云</a>、<a href="/brands/weitu/">唯兔云</a>）内部，因为专线本身不经公网审查。</li>
-<li><strong>第二代：Trojan / VLESS + TLS</strong> —— 完全模拟正常 HTTPS 流量。客户端与服务端通过标准 TLS 1.3 握手，外部防火墙只能观察到合法的 SNI 域名握手数据。</li>
-<li><strong>第三代：VLESS Reality &amp; Hysteria2</strong> —— Reality 实现了“借用他人合法证书”伪装，彻底杜绝了自签证书特征；而 Hysteria2 则基于 QUIC (UDP) 协议，在恶劣丢包环境下能暴力压榨带宽。</li>
-</ol>
-<h2 id="2-协议特性全景对比">2. 协议特性全景对比</h2>
+      <h2 id="1-代理协议的三次密码学与架构迭代">1. 代理协议的三次密码学与架构迭代</h2>
+<p>过去十五年中，网络代理技术与审查防火墙之间展开了高强度的博弈对抗，经历了三次重大架构跃迁：</p>
+<h3 id="第一代对称加密流-shadowsocks--ssr">第一代：对称加密流 (Shadowsocks / SSR)</h3>
+<ul>
+<li><strong>核心思想</strong>：通过预共享密钥（PSK）与对称加密算法（如 AES-256-GCM、ChaCha20-Poly1305）将明文数据封装为完全随机的密文流。</li>
+<li><strong>局限性</strong>：密文数据具有“高熵（High Entropy）”特征，且缺乏主动探测防御能力。审查系统可通过向服务器发送异常畸形探测包，根据服务器的回应行为断定其是否运行代理服务端。</li>
+<li><strong>现代生存空间</strong>：在 <a href="/brands/guangsu/">光速云</a>、<a href="/brands/xingdaomeng/">星岛梦</a> 等纯专线内部依然广泛使用，因为专线在内网传输，无需担心外部审查探测，SS 反而拥有极低的 CPU 开销和极高的吞吐效率。</li>
+</ul>
+<h3 id="第二代伪装标准-https-握手-trojan--vless--tls">第二代：伪装标准 HTTPS 握手 (Trojan / VLESS + TLS)</h3>
+<ul>
+<li><strong>核心思想</strong>：不再试图制造“不可识别的密文”，而是“大隐隐于市”，直接使用标准的 TLS 1.3 加密协议，将代理流量伪装成正常的电商、门户或 API 访问。</li>
+<li><strong>Trojan 机制</strong>：若用户提供正确的密码，服务器转发代理流量；若收到非法的外部扫描探测，服务端直接将请求反向代理到一个真实的开源网站页面（如个人博客或静态站），完美通过探测检查。</li>
+</ul>
+<h3 id="第三代终极伪装与弱网暴力-vless-reality--hysteria2">第三代：终极伪装与弱网暴力 (VLESS Reality &amp; Hysteria2)</h3>
+<ul>
+<li><strong>VLESS Reality (证书借用)</strong>：解决了以往自建网站需要购买域名和申请合法证书的痛点。Reality 允许服务端“借用”海外大型合规网站（如 Apple、Microsoft、Amazon）的真实有效证书，在 TLS 握手阶段实现完全一致的密码学指纹。</li>
+<li><strong>Hysteria2 (QUIC / UDP 暴力重传)</strong>：基于魔改的拥塞控制算法（Brutal Congestion Control），即使在丢包率高达 30% 的极度恶劣网络环境下，也能通过激进的 UDP 发包策略强制跑满本地下行带宽。</li>
+</ul>
+<hr>
+<h2 id="2-主流代理协议技术特性横向矩阵">2. 主流代理协议技术特性横向矩阵</h2>
 <table>
 	<thead>
 			<tr>
-					<th style="text-align: left">协议名称</th>
-					<th style="text-align: left">底层传输</th>
+					<th style="text-align: left">协议方案</th>
+					<th style="text-align: center">底层传输通道</th>
 					<th style="text-align: center">握手伪装度</th>
-					<th style="text-align: center">协议特征识别率</th>
-					<th style="text-align: center">CPU 运算开销</th>
-					<th style="text-align: left">最佳使用场景</th>
+					<th style="text-align: center">被精准识别概率</th>
+					<th style="text-align: center">客户端 CPU 占用</th>
+					<th style="text-align: left">适用场景与推荐服务商</th>
 			</tr>
 	</thead>
 	<tbody>
 			<tr>
 					<td style="text-align: left"><strong>Shadowsocks (AEAD)</strong></td>
-					<td style="text-align: left">TCP</td>
-					<td style="text-align: center">基础加密</td>
-					<td style="text-align: center">中等 (公网易受阻)</td>
-					<td style="text-align: center">极低</td>
-					<td style="text-align: left">纯内网专线 (IEPL/IPLC)</td>
+					<td style="text-align: center">TCP</td>
+					<td style="text-align: center">纯密文 (无伪装)</td>
+					<td style="text-align: center">纯公网极高 / 专线中零风险</td>
+					<td style="text-align: center"><strong>极低 (硬件省电)</strong></td>
+					<td style="text-align: left">纯专线内部 (<a href="/brands/guangsu/">光速云</a>、<a href="/brands/weifeng/">微风网络</a>)</td>
 			</tr>
 			<tr>
-					<td style="text-align: left"><strong>VLESS + TLS</strong></td>
-					<td style="text-align: left">TCP / gRPC</td>
-					<td style="text-align: center">极高 (真实证书)</td>
-					<td style="text-align: center">极低</td>
+					<td style="text-align: left"><strong>VLESS + TLS (Vision)</strong></td>
+					<td style="text-align: center">TCP / gRPC</td>
+					<td style="text-align: center">完整合法 TLS 1.3</td>
+					<td style="text-align: center"><strong>极低</strong></td>
 					<td style="text-align: center">中等</td>
-					<td style="text-align: left"><a href="/brands/guangsu/">光速云</a> 旗舰综合型</td>
+					<td style="text-align: left">综合型旗舰机场主流 (<a href="/brands/guangsu/">光速云</a>)</td>
 			</tr>
 			<tr>
 					<td style="text-align: left"><strong>Trojan</strong></td>
-					<td style="text-align: left">TCP</td>
-					<td style="text-align: center">极高 (伪装网站)</td>
-					<td style="text-align: center">极低</td>
+					<td style="text-align: center">TCP</td>
+					<td style="text-align: center">真实网站反代</td>
+					<td style="text-align: center"><strong>极低</strong></td>
 					<td style="text-align: center">中等</td>
-					<td style="text-align: left">商务级抗封锁通道</td>
+					<td style="text-align: left">商业商务稳定通信 (<a href="/brands/wgetcloud/">WgetCloud</a>)</td>
 			</tr>
 			<tr>
-					<td style="text-align: left"><strong>Hysteria2 (QUIC)</strong></td>
-					<td style="text-align: left">UDP</td>
+					<td style="text-align: left"><strong>VLESS Reality</strong></td>
+					<td style="text-align: center">TCP</td>
+					<td style="text-align: center">借用海外权威证书</td>
+					<td style="text-align: center"><strong>几乎无法分辨</strong></td>
+					<td style="text-align: center">中等</td>
+					<td style="text-align: left">严苛公网环境自建与前沿专线</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>Hysteria2</strong></td>
+					<td style="text-align: center">UDP (QUIC)</td>
 					<td style="text-align: center">伪装 HTTP/3</td>
-					<td style="text-align: center">极低</td>
-					<td style="text-align: center">中高</td>
-					<td style="text-align: left">弱网、高丢包跨境环境</td>
+					<td style="text-align: center">低 (部分运营商限UDP)</td>
+					<td style="text-align: center">稍高</td>
+					<td style="text-align: left">偏远弱网地区、校园网高丢包环境</td>
 			</tr>
 	</tbody>
 </table>
@@ -276,8 +296,14 @@
       <div class="toc-list">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-代理协议的三代演进">1. 代理协议的三代演进</a></li>
-    <li><a href="#2-协议特性全景对比">2. 协议特性全景对比</a></li>
+    <li><a href="#1-代理协议的三次密码学与架构迭代">1. 代理协议的三次密码学与架构迭代</a>
+      <ul>
+        <li><a href="#第一代对称加密流-shadowsocks--ssr">第一代：对称加密流 (Shadowsocks / SSR)</a></li>
+        <li><a href="#第二代伪装标准-https-握手-trojan--vless--tls">第二代：伪装标准 HTTPS 握手 (Trojan / VLESS + TLS)</a></li>
+        <li><a href="#第三代终极伪装与弱网暴力-vless-reality--hysteria2">第三代：终极伪装与弱网暴力 (VLESS Reality &amp; Hysteria2)</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-主流代理协议技术特性横向矩阵">2. 主流代理协议技术特性横向矩阵</a></li>
   </ul>
 </nav>
       </div>

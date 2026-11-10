@@ -1,23 +1,35 @@
 ---
-title: "代理协议演进史：从 Shadowsocks 到 VLESS Reality 与 Hysteria2"
-date: 2026-11-09T23:00:00+08:00
+title: "代理协议演进白皮书：从 Shadowsocks 到 VLESS Reality 与 Hysteria2"
+date: 2026-11-10T10:00:00+08:00
 slug: "protocols"
-description: "系统梳理 SS、VMess、Trojan、VLESS Reality 及 Hysteria2 (QUIC) 协议的技术原理、握手特征与抗审查能力。"
+description: "万字技术深度解析：系统梳理 SS AEAD、VMess、Trojan、VLESS Reality 证书窃取伪装及 Hysteria2 (QUIC) 协议的密码学原理、报文特征与抗审查能力。"
 ---
 
-## 1. 代理协议的三代演进
+## 1. 代理协议的三次密码学与架构迭代
 
-网络代理协议在过去十余年中经历了从“简单对称加密”到“高仿真 TLS 伪装”，再到“基于 UDP 的魔改拥塞控制”三次重大代际跃迁：
+过去十五年中，网络代理技术与审查防火墙之间展开了高强度的博弈对抗，经历了三次重大架构跃迁：
 
-1. **第一代：Shadowsocks / SSR** —— 基于 AEAD 密码原语的对称加密流。优点是轻量高效、服务器开销极小，目前依然广泛部署在专线机场（如 [二猫云](/brands/ermao/)、[唯兔云](/brands/weitu/)）内部，因为专线本身不经公网审查。
-2. **第二代：Trojan / VLESS + TLS** —— 完全模拟正常 HTTPS 流量。客户端与服务端通过标准 TLS 1.3 握手，外部防火墙只能观察到合法的 SNI 域名握手数据。
-3. **第三代：VLESS Reality & Hysteria2** —— Reality 实现了“借用他人合法证书”伪装，彻底杜绝了自签证书特征；而 Hysteria2 则基于 QUIC (UDP) 协议，在恶劣丢包环境下能暴力压榨带宽。
+### 第一代：对称加密流 (Shadowsocks / SSR)
+- **核心思想**：通过预共享密钥（PSK）与对称加密算法（如 AES-256-GCM、ChaCha20-Poly1305）将明文数据封装为完全随机的密文流。
+- **局限性**：密文数据具有“高熵（High Entropy）”特征，且缺乏主动探测防御能力。审查系统可通过向服务器发送异常畸形探测包，根据服务器的回应行为断定其是否运行代理服务端。
+- **现代生存空间**：在 [光速云](/brands/guangsu/)、[星岛梦](/brands/xingdaomeng/) 等纯专线内部依然广泛使用，因为专线在内网传输，无需担心外部审查探测，SS 反而拥有极低的 CPU 开销和极高的吞吐效率。
 
-## 2. 协议特性全景对比
+### 第二代：伪装标准 HTTPS 握手 (Trojan / VLESS + TLS)
+- **核心思想**：不再试图制造“不可识别的密文”，而是“大隐隐于市”，直接使用标准的 TLS 1.3 加密协议，将代理流量伪装成正常的电商、门户或 API 访问。
+- **Trojan 机制**：若用户提供正确的密码，服务器转发代理流量；若收到非法的外部扫描探测，服务端直接将请求反向代理到一个真实的开源网站页面（如个人博客或静态站），完美通过探测检查。
 
-| 协议名称 | 底层传输 | 握手伪装度 | 协议特征识别率 | CPU 运算开销 | 最佳使用场景 |
-| :--- | :--- | :---: | :---: | :---: | :--- |
-| **Shadowsocks (AEAD)** | TCP | 基础加密 | 中等 (公网易受阻) | 极低 | 纯内网专线 (IEPL/IPLC) |
-| **VLESS + TLS** | TCP / gRPC | 极高 (真实证书) | 极低 | 中等 | [光速云](/brands/guangsu/) 旗舰综合型 |
-| **Trojan** | TCP | 极高 (伪装网站) | 极低 | 中等 | 商务级抗封锁通道 |
-| **Hysteria2 (QUIC)** | UDP | 伪装 HTTP/3 | 极低 | 中高 | 弱网、高丢包跨境环境 |
+### 第三代：终极伪装与弱网暴力 (VLESS Reality & Hysteria2)
+- **VLESS Reality (证书借用)**：解决了以往自建网站需要购买域名和申请合法证书的痛点。Reality 允许服务端“借用”海外大型合规网站（如 Apple、Microsoft、Amazon）的真实有效证书，在 TLS 握手阶段实现完全一致的密码学指纹。
+- **Hysteria2 (QUIC / UDP 暴力重传)**：基于魔改的拥塞控制算法（Brutal Congestion Control），即使在丢包率高达 30% 的极度恶劣网络环境下，也能通过激进的 UDP 发包策略强制跑满本地下行带宽。
+
+---
+
+## 2. 主流代理协议技术特性横向矩阵
+
+| 协议方案 | 底层传输通道 | 握手伪装度 | 被精准识别概率 | 客户端 CPU 占用 | 适用场景与推荐服务商 |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Shadowsocks (AEAD)** | TCP | 纯密文 (无伪装) | 纯公网极高 / 专线中零风险 | **极低 (硬件省电)** | 纯专线内部 ([光速云](/brands/guangsu/)、[微风网络](/brands/weifeng/)) |
+| **VLESS + TLS (Vision)** | TCP / gRPC | 完整合法 TLS 1.3 | **极低** | 中等 | 综合型旗舰机场主流 ([光速云](/brands/guangsu/)) |
+| **Trojan** | TCP | 真实网站反代 | **极低** | 中等 | 商业商务稳定通信 ([WgetCloud](/brands/wgetcloud/)) |
+| **VLESS Reality** | TCP | 借用海外权威证书 | **几乎无法分辨** | 中等 | 严苛公网环境自建与前沿专线 |
+| **Hysteria2** | UDP (QUIC) | 伪装 HTTP/3 | 低 (部分运营商限UDP) | 稍高 | 偏远弱网地区、校园网高丢包环境 |

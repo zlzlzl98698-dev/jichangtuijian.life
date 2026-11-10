@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>iOS 与 Android 移动端分流配置与电量优化全攻略 - 机场life</title>
-  <meta name="description" content="针对 iPhone 与安卓手机的 Shadowrocket 小火箭、v2rayNG 优化教程，合理配置规则减少电量损耗与后台被杀。">
+  <title>移动端轻量高效网络分流与系统保活避坑全景指南 - 机场life</title>
+  <meta name="description" content="万字深度实战：iPhone (Shadowrocket 小火箭) 与 Android (v2rayNG / FlClash) 的场景化配置、电量损耗控制、防 DNS 污染与后台被杀解决方案。">
   <link rel="canonical" href="https://jichangtuijian.life/clients/mobile/">
   <meta name="robots" content="index, follow">
 
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="iOS 与 Android 移动端分流配置与电量优化全攻略">
-  <meta property="og:description" content="针对 iPhone 与安卓手机的 Shadowrocket 小火箭、v2rayNG 优化教程，合理配置规则减少电量损耗与后台被杀。">
+  <meta property="og:title" content="移动端轻量高效网络分流与系统保活避坑全景指南">
+  <meta property="og:description" content="万字深度实战：iPhone (Shadowrocket 小火箭) 与 Android (v2rayNG / FlClash) 的场景化配置、电量损耗控制、防 DNS 污染与后台被杀解决方案。">
   <meta property="og:url" content="https://jichangtuijian.life/clients/mobile/">
   <meta property="og:site_name" content="机场life">
 
@@ -52,7 +52,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "iOS 与 Android 移动端分流配置与电量优化全攻略",
+          "name": "移动端轻量高效网络分流与系统保活避坑全景指南",
           "item": "https:\/\/jichangtuijian.life\/clients\/mobile\/"
         }
         
@@ -67,11 +67,11 @@
       "isPartOf": {
         "@id": "https:\/\/jichangtuijian.life\/#website"
       },
-      "headline": "iOS 与 Android 移动端分流配置与电量优化全攻略",
-      "description": "针对 iPhone 与安卓手机的 Shadowrocket 小火箭、v2rayNG 优化教程，合理配置规则减少电量损耗与后台被杀。",
+      "headline": "移动端轻量高效网络分流与系统保活避坑全景指南",
+      "description": "万字深度实战：iPhone (Shadowrocket 小火箭) 与 Android (v2rayNG \/ FlClash) 的场景化配置、电量损耗控制、防 DNS 污染与后台被杀解决方案。",
       "mainEntityOfPage": "https:\/\/jichangtuijian.life\/clients\/mobile\/",
-      "datePublished": "2026-11-09T23:00:00\u002b08:00",
-      "dateModified": "2026-11-09T23:00:00\u002b08:00",
+      "datePublished": "2026-11-10T10:00:00\u002b08:00",
+      "dateModified": "2026-11-10T10:00:00\u002b08:00",
       "author": {
         "@type": "Organization",
         "name": "机场life 可观测性实验室"
@@ -155,31 +155,30 @@
   <article class="article-content">
     <div class="article-header">
       <div class="article-breadcrumb">
-        <a href="/">首页</a> / <a href="/clients/">Clients</a> / <span>iOS 与 Android 移动端分流配置与电量优化全攻略</span>
+        <a href="/">首页</a> / <a href="/clients/">Clients</a> / <span>移动端轻量高效网络分流与系统保活避坑全景指南</span>
       </div>
-      <h1 class="article-title">iOS 与 Android 移动端分流配置与电量优化全攻略</h1>
+      <h1 class="article-title">移动端轻量高效网络分流与系统保活避坑全景指南</h1>
       <div class="article-meta">
-        <span>📅 发布时间：2026-11-09</span>
+        <span>📅 发布时间：2026-11-10</span>
         <span>⏱️ 阅读时间：约 1 分钟</span>
         <span>🏷️ 架构专栏：clients</span>
       </div>
     </div>
 
     <div class="prose">
-      <h2 id="1-ios-端小火箭-shadowrocket-最佳实践">1. iOS 端：小火箭 (Shadowrocket) 最佳实践</h2>
-<p>在美区 App Store 购买安装 Shadowrocket（售价 2.99 美元）后：</p>
-<ol>
-<li>复制机场提供的专属订阅链接（如 <a href="/brands/guangsu/">光速云</a> 后台一键复制）；</li>
-<li>打开小火箭，点击右上角 <code>+</code> ➔ 类型选择 <code>Subscribe</code> ➔ 粘贴 URL 并保存；</li>
-<li>全局路由模式务必选择 <strong>配置 (Rule)</strong>，避免选择“代理 (Proxy)”导致访问国内应用（微信、美团）浪费专线流量。</li>
-</ol>
-<h2 id="2-android-端解决后台被系统杀死的技巧">2. Android 端：解决后台被系统杀死的技巧</h2>
-<p>在小米 MIUI/HyperOS、华为 HarmonyOS 或 OPPO/VIVO 设备上使用 v2rayNG 时：</p>
+      <h2 id="1-移动端的核心诉求省电保活与精准分流">1. 移动端的核心诉求：省电、保活与精准分流</h2>
+<p>与电脑常年插电不同，手机端代理软件最大的挑战在于：</p>
 <ul>
-<li>进入系统「设置」➔「应用管理」➔ 找到 v2rayNG；</li>
-<li>将省电策略设为「无限制」；</li>
-<li>在多任务卡片界面将应用上锁，防止后台切出时连接断开。</li>
+<li><strong>避免手机发热与电量雪崩</strong>：若配置不当导致所有国内流量（如微信视频、抖音、淘宝）全走海外专线，不仅浪费专线流量，还会让手机持续处于加密运算的高负荷状态；</li>
+<li><strong>安卓系统激进的杀后台机制</strong>：国产系统（MIUI/澎湃OS、ColorOS、OriginOS、HarmonyOS）经常在锁屏后杀死后台代理进程，导致微信消息延迟或科学上网中断。</li>
 </ul>
+<hr>
+<h2 id="2-ios-端shadowrocket-小火箭-黄金配置法则">2. iOS 端：Shadowrocket (小火箭) 黄金配置法则</h2>
+<ol>
+<li><strong>全局路由务必选择【配置 (Config)】</strong>：严禁选择“代理 (Proxy)”全局模式；</li>
+<li><strong>启用原生 HTTPS 解密与证书 (如需拦截去广告)</strong>：根据需要开启 MitM；</li>
+<li><strong>自动节点优选策略组</strong>：配置包含香港、新加坡、日本节点的 URL-Test 自动测速组，当某个节点出现网络微动时，小火箭能在 1 秒内无感知切换。</li>
+</ol>
 
     </div>
 
@@ -236,8 +235,8 @@
       <div class="toc-list">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-ios-端小火箭-shadowrocket-最佳实践">1. iOS 端：小火箭 (Shadowrocket) 最佳实践</a></li>
-    <li><a href="#2-android-端解决后台被系统杀死的技巧">2. Android 端：解决后台被系统杀死的技巧</a></li>
+    <li><a href="#1-移动端的核心诉求省电保活与精准分流">1. 移动端的核心诉求：省电、保活与精准分流</a></li>
+    <li><a href="#2-ios-端shadowrocket-小火箭-黄金配置法则">2. iOS 端：Shadowrocket (小火箭) 黄金配置法则</a></li>
   </ul>
 </nav>
       </div>

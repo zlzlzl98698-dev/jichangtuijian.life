@@ -10,22 +10,29 @@
 		
 		
 		
-			<lastBuildDate>Mon, 09 Nov 2026 23:00:00 +0800</lastBuildDate>
+			<lastBuildDate>Tue, 10 Nov 2026 10:00:00 +0800</lastBuildDate>
 		
 			<atom:link href="https://jichangtuijian.life/clients/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>桌面端网络可观测性与代理客户端工程级配置实操指南</title>
+				<link>https://jichangtuijian.life/clients/desktop/</link>
+				<pubDate>Tue, 10 Nov 2026 10:00:00 +0800</pubDate>
+				<guid>https://jichangtuijian.life/clients/desktop/</guid>
+				<description>&lt;h2 id=&#34;1-桌面端网络架构的核心痛点系统代理的局限&#34;&gt;1. 桌面端网络架构的核心痛点：系统代理的局限&lt;/h2&gt;&#xA;&lt;p&gt;在 Windows 与 macOS 上，大部分新手仅开启了“系统代理 (System Proxy)”。然而：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;终端命令行不受控&lt;/strong&gt;：&lt;code&gt;git clone&lt;/code&gt;、&lt;code&gt;curl&lt;/code&gt;、&lt;code&gt;pip install&lt;/code&gt;、&lt;code&gt;npm install&lt;/code&gt; 默认不走系统代理，依然直连海外超时；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;游戏客户端直连丢包&lt;/strong&gt;：Steam、Epic、暴雪战网以及各类联机游戏采用 UDP 协议，系统代理无法接管；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：必须在现代客户端中开启 &lt;strong&gt;TUN 模式 (Network Tunnel 虚拟网卡)&lt;/strong&gt;。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;2-clash-verge-rev-mihomo-内核-极速实操步骤&#34;&gt;2. Clash Verge Rev (Mihomo 内核) 极速实操步骤&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;下载与环境配置&lt;/strong&gt;：访问 GitHub 官方仓库下载对应架构的安装包，推荐在 Windows 上以管理员身份运行；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;启用服务模式 (Service Mode)&lt;/strong&gt;：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;进入「设置」➔ 找到「内核设置」或「服务模式」➔ 点击「安装」；&lt;/li&gt;&#xA;&lt;li&gt;授权后状态变为绿色活动状态；&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;打开 TUN 模式&lt;/strong&gt;：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;在设置中打开「TUN 模式」开关；&lt;/li&gt;&#xA;&lt;li&gt;此时操作系统会新建一张虚拟网卡，整机的全部 TCP 与 UDP 流量全自动接入智能分流；&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;导入专线订阅&lt;/strong&gt;：复制 &lt;a href=&#34;https://jichangtuijian.life/brands/guangsu/&#34;&gt;光速云&lt;/a&gt; 或其他机场的订阅链接，在「订阅」界面导入并更新即可。&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+			</item>
+			<item>
+				<title>移动端轻量高效网络分流与系统保活避坑全景指南</title>
+				<link>https://jichangtuijian.life/clients/mobile/</link>
+				<pubDate>Tue, 10 Nov 2026 10:00:00 +0800</pubDate>
+				<guid>https://jichangtuijian.life/clients/mobile/</guid>
+				<description>&lt;h2 id=&#34;1-移动端的核心诉求省电保活与精准分流&#34;&gt;1. 移动端的核心诉求：省电、保活与精准分流&lt;/h2&gt;&#xA;&lt;p&gt;与电脑常年插电不同，手机端代理软件最大的挑战在于：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;避免手机发热与电量雪崩&lt;/strong&gt;：若配置不当导致所有国内流量（如微信视频、抖音、淘宝）全走海外专线，不仅浪费专线流量，还会让手机持续处于加密运算的高负荷状态；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;安卓系统激进的杀后台机制&lt;/strong&gt;：国产系统（MIUI/澎湃OS、ColorOS、OriginOS、HarmonyOS）经常在锁屏后杀死后台代理进程，导致微信消息延迟或科学上网中断。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;2-ios-端shadowrocket-小火箭-黄金配置法则&#34;&gt;2. iOS 端：Shadowrocket (小火箭) 黄金配置法则&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;全局路由务必选择【配置 (Config)】&lt;/strong&gt;：严禁选择“代理 (Proxy)”全局模式；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;启用原生 HTTPS 解密与证书 (如需拦截去广告)&lt;/strong&gt;：根据需要开启 MitM；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;自动节点优选策略组&lt;/strong&gt;：配置包含香港、新加坡、日本节点的 URL-Test 自动测速组，当某个节点出现网络微动时，小火箭能在 1 秒内无感知切换。&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+			</item>
 			<item>
 				<title>Clash Verge Rev 完整实操教程：Mihomo 内核跨平台标杆</title>
 				<link>https://jichangtuijian.life/clients/clash-verge/</link>
 				<pubDate>Mon, 09 Nov 2026 23:00:00 +0800</pubDate>
 				<guid>https://jichangtuijian.life/clients/clash-verge/</guid>
 				<description>&lt;p&gt;随着旧版 Clash for Windows 项目的停止维护，由社区活跃维护的 &lt;strong&gt;Clash Verge Rev&lt;/strong&gt; 凭借现代化 Tauri 架构与强大的 Mihomo (Clash.Meta) 内核，已成为桌面端公认的最佳接任者。&lt;/p&gt;&#xA;&lt;h2 id=&#34;核心配置四步走&#34;&gt;核心配置四步走&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;下载安装&lt;/strong&gt;：前往官方 GitHub Release 页面下载对应版本（Windows 用户选 &lt;code&gt;x64-setup.exe&lt;/code&gt;，Mac M系列选 &lt;code&gt;aarch64.dmg&lt;/code&gt;）；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;导入订阅&lt;/strong&gt;：点击左侧「订阅」➔ 将机场提供的订阅地址粘贴至上方输入框 ➔ 点击「保存并导入」；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;选择节点&lt;/strong&gt;：切换至「代理」面板，展开策略组，按延迟自动测速（点击闪电图标），选择低延迟的 IEPL 专线节点；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;系统代理&lt;/strong&gt;：点击左侧「设置」，打开「系统代理」开关，即可畅享高速出海网络。&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
-			</item>
-			<item>
-				<title>iOS 与 Android 移动端分流配置与电量优化全攻略</title>
-				<link>https://jichangtuijian.life/clients/mobile/</link>
-				<pubDate>Mon, 09 Nov 2026 23:00:00 +0800</pubDate>
-				<guid>https://jichangtuijian.life/clients/mobile/</guid>
-				<description>&lt;h2 id=&#34;1-ios-端小火箭-shadowrocket-最佳实践&#34;&gt;1. iOS 端：小火箭 (Shadowrocket) 最佳实践&lt;/h2&gt;&#xA;&lt;p&gt;在美区 App Store 购买安装 Shadowrocket（售价 2.99 美元）后：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;复制机场提供的专属订阅链接（如 &lt;a href=&#34;https://jichangtuijian.life/brands/guangsu/&#34;&gt;光速云&lt;/a&gt; 后台一键复制）；&lt;/li&gt;&#xA;&lt;li&gt;打开小火箭，点击右上角 &lt;code&gt;+&lt;/code&gt; ➔ 类型选择 &lt;code&gt;Subscribe&lt;/code&gt; ➔ 粘贴 URL 并保存；&lt;/li&gt;&#xA;&lt;li&gt;全局路由模式务必选择 &lt;strong&gt;配置 (Rule)&lt;/strong&gt;，避免选择“代理 (Proxy)”导致访问国内应用（微信、美团）浪费专线流量。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;2-android-端解决后台被系统杀死的技巧&#34;&gt;2. Android 端：解决后台被系统杀死的技巧&lt;/h2&gt;&#xA;&lt;p&gt;在小米 MIUI/HyperOS、华为 HarmonyOS 或 OPPO/VIVO 设备上使用 v2rayNG 时：&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Shadowrocket (小火箭) 完整配置指南：iOS 首选出海神器</title>
@@ -40,13 +47,6 @@
 				<pubDate>Mon, 09 Nov 2026 23:00:00 +0800</pubDate>
 				<guid>https://jichangtuijian.life/clients/v2rayn/</guid>
 				<description>&lt;p&gt;&lt;strong&gt;v2rayN&lt;/strong&gt; 是 Windows 平台经典成熟的轻量代理客户端，深受极客与多协议用户推崇。&lt;/p&gt;&#xA;&lt;h2 id=&#34;核心进阶功能解析&#34;&gt;核心进阶功能解析&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;多内核自由切换&lt;/strong&gt;：支持 Xray-core、sing-box-core、mihomo-core 等多种现代内核；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;批量 Ping 与真连接测试&lt;/strong&gt;：快捷键 &lt;code&gt;Ctrl + R&lt;/code&gt; 可对数百个节点进行真实网页请求延迟测速，自动过滤失效与超时节点；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;丰富的路由自定义&lt;/strong&gt;：支持基于 GeoIP 与 GeoSite 数据库的高级分流，实现广告拦截、国内直连与外网加速。&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-			</item>
-			<item>
-				<title>Windows 与 macOS 桌面端代理客户端深度配置与 TUN 模式详解</title>
-				<link>https://jichangtuijian.life/clients/desktop/</link>
-				<pubDate>Mon, 09 Nov 2026 23:00:00 +0800</pubDate>
-				<guid>https://jichangtuijian.life/clients/desktop/</guid>
-				<description>&lt;h2 id=&#34;1-桌面端的核心痛点系统代理与终端失效&#34;&gt;1. 桌面端的核心痛点：系统代理与终端失效&lt;/h2&gt;&#xA;&lt;p&gt;很多用户在电脑上开启代理软件后，发现浏览器能打开网页，但 Git 命令行、Python 包下载、Docker 容器或 Steam 游戏却依然无法联网。这是因为传统“系统代理”仅对支持 HTTP 代理的浏览器生效。&lt;/p&gt;&#xA;&lt;h2 id=&#34;2-终极解决方案开启-tun-模式-虚拟网卡&#34;&gt;2. 终极解决方案：开启 TUN 模式 (虚拟网卡)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;TUN (Network Tunnel) 模式&lt;/strong&gt; 会在操作系统中虚拟一张网卡，在网络层（L3）接管整台电脑的全部 IP 数据包。&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
