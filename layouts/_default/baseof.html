@@ -7,6 +7,8 @@
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.siteDescription }}{{ end }}">
   <link rel="canonical" href="{{ .RelPermalink }}">
   <meta name="robots" content="index, follow">
+  <link rel="icon" href="/images/avatar.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="/images/avatar.webp">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
@@ -14,6 +16,9 @@
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.siteDescription }}{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:site_name" content="{{ .Site.Params.brandName }}">
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/avatar.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}images/avatar.webp">
 
   <!-- Theme Styles -->
   <link rel="stylesheet" href="/css/style.css">
