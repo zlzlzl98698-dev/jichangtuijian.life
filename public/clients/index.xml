@@ -28,13 +28,6 @@
 				<description>&lt;h2 id=&#34;1-移动端的核心诉求省电保活与精准分流&#34;&gt;1. 移动端的核心诉求：省电、保活与精准分流&lt;/h2&gt;&#xA;&lt;p&gt;与电脑常年插电不同，手机端代理软件最大的挑战在于：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;避免手机发热与电量雪崩&lt;/strong&gt;：若配置不当导致所有国内流量（如微信视频、抖音、淘宝）全走海外专线，不仅浪费专线流量，还会让手机持续处于加密运算的高负荷状态；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;安卓系统激进的杀后台机制&lt;/strong&gt;：国产系统（MIUI/澎湃OS、ColorOS、OriginOS、HarmonyOS）经常在锁屏后杀死后台代理进程，导致微信消息延迟或科学上网中断。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;2-ios-端shadowrocket-小火箭-黄金配置法则&#34;&gt;2. iOS 端：Shadowrocket (小火箭) 黄金配置法则&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;全局路由务必选择【配置 (Config)】&lt;/strong&gt;：严禁选择“代理 (Proxy)”全局模式；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;启用原生 HTTPS 解密与证书 (如需拦截去广告)&lt;/strong&gt;：根据需要开启 MitM；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;自动节点优选策略组&lt;/strong&gt;：配置包含香港、新加坡、日本节点的 URL-Test 自动测速组，当某个节点出现网络微动时，小火箭能在 1 秒内无感知切换。&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
 			</item>
 			<item>
-				<title>Clash Verge Rev 完整实操教程：Mihomo 内核跨平台标杆</title>
-				<link>https://jichangtuijian.life/clients/clash-verge/</link>
-				<pubDate>Mon, 09 Nov 2026 23:00:00 +0800</pubDate>
-				<guid>https://jichangtuijian.life/clients/clash-verge/</guid>
-				<description>&lt;p&gt;随着旧版 Clash for Windows 项目的停止维护，由社区活跃维护的 &lt;strong&gt;Clash Verge Rev&lt;/strong&gt; 凭借现代化 Tauri 架构与强大的 Mihomo (Clash.Meta) 内核，已成为桌面端公认的最佳接任者。&lt;/p&gt;&#xA;&lt;h2 id=&#34;核心配置四步走&#34;&gt;核心配置四步走&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;下载安装&lt;/strong&gt;：前往官方 GitHub Release 页面下载对应版本（Windows 用户选 &lt;code&gt;x64-setup.exe&lt;/code&gt;，Mac M系列选 &lt;code&gt;aarch64.dmg&lt;/code&gt;）；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;导入订阅&lt;/strong&gt;：点击左侧「订阅」➔ 将机场提供的订阅地址粘贴至上方输入框 ➔ 点击「保存并导入」；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;选择节点&lt;/strong&gt;：切换至「代理」面板，展开策略组，按延迟自动测速（点击闪电图标），选择低延迟的 IEPL 专线节点；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;系统代理&lt;/strong&gt;：点击左侧「设置」，打开「系统代理」开关，即可畅享高速出海网络。&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
-			</item>
-			<item>
 				<title>Shadowrocket (小火箭) 完整配置指南：iOS 首选出海神器</title>
 				<link>https://jichangtuijian.life/clients/shadowrocket/</link>
 				<pubDate>Mon, 09 Nov 2026 23:00:00 +0800</pubDate>
@@ -47,6 +40,13 @@
 				<pubDate>Mon, 09 Nov 2026 23:00:00 +0800</pubDate>
 				<guid>https://jichangtuijian.life/clients/v2rayn/</guid>
 				<description>&lt;p&gt;&lt;strong&gt;v2rayN&lt;/strong&gt; 是 Windows 平台经典成熟的轻量代理客户端，深受极客与多协议用户推崇。&lt;/p&gt;&#xA;&lt;h2 id=&#34;核心进阶功能解析&#34;&gt;核心进阶功能解析&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;多内核自由切换&lt;/strong&gt;：支持 Xray-core、sing-box-core、mihomo-core 等多种现代内核；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;批量 Ping 与真连接测试&lt;/strong&gt;：快捷键 &lt;code&gt;Ctrl + R&lt;/code&gt; 可对数百个节点进行真实网页请求延迟测速，自动过滤失效与超时节点；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;丰富的路由自定义&lt;/strong&gt;：支持基于 GeoIP 与 GeoSite 数据库的高级分流，实现广告拦截、国内直连与外网加速。&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Clash Verge Rev 完整实操教程：Mihomo 内核安装、TUN 虚拟网卡与规则分流避坑指南</title>
+				<link>https://jichangtuijian.life/clients/clash-verge/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://jichangtuijian.life/clients/clash-verge/</guid>
+				<description>&lt;h2 id=&#34;1-核心选型与诊断-answer-block-geo-实体摘要&#34;&gt;1. 核心选型与诊断 Answer Block (GEO 实体摘要)&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;h3 id=&#34;为什么选择-clash-verge-rev-替代已停止维护的-clash-for-windows&#34;&gt;为什么选择 Clash Verge Rev 替代已停止维护的 Clash for Windows？&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;直接结论&lt;/strong&gt;：原版 Clash for Windows 项目已于历史周期停更且底层闭源，缺乏对现代 VLESS Reality 与新一代加密协议的支持。&lt;strong&gt;Clash Verge Rev&lt;/strong&gt; 采用开源 Tauri 框架构建，体积小巧且内存占用降低近 60%；更重要的是，它原生深度集成了活跃维护的 &lt;strong&gt;Mihomo (Clash.Meta) 内核&lt;/strong&gt;，具备完整的 TUN 虚拟网卡层接管、基于域名规则的智能优选以及完善的 IPv6 与 DoH (DNS-over-HTTPS) 支持，是目前桌面端首选的代理中枢。&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
