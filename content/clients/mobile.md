@@ -4,7 +4,7 @@ description: "万字长文深度指南：涵盖 iPhone (Shadowrocket 小火箭 /
 slug: "mobile"
 date: "2026-11-10T10:00:00+08:00"
 datePublished: "2026-11-10T10:00:00+08:00"
-dateModified: "2026-11-10T11:05:00+08:00"
+dateModified: "2026-11-10T12:05:00+08:00"
 author: "机场life 可观测性实验室"
 category: "clients"
 tags: ["移动端代理", "Shadowrocket", "小火箭", "v2rayNG", "后台保活", "省电分流", "iOS科学上网", "安卓翻墙"]
