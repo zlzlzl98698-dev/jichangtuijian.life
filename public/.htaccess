@@ -1,15 +1,14 @@
 # Apache Server Configuration for jichangtuijian.life
 RewriteEngine On
 
-# 1. 强制 HTTPS 访问
+# 1. 强制 HTTPS 与规范主域名 (301 重定向 www 到裸域)
+RewriteCond %{HTTP_HOST} ^www\.jichangtuijian\.life$ [NC]
+RewriteRule ^(.*)$ https://jichangtuijian.life/$1 [L,R=301]
+
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# 2. 移除尾部多余斜杠（除目录外）
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ /$1 [L,R=301]
-
-# 3. 安全响应头
+# 2. 安全响应头
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
@@ -17,14 +16,14 @@ RewriteRule ^(.*)/$ /$1 [L,R=301]
   Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
-# 4. Gzip 压缩支持
+# 3. Gzip 压缩支持
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
   AddOutputFilterByType DEFLATE application/javascript application/json application/xml
   AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
-# 5. 静态资源长效缓存
+# 4. 静态资源长效缓存
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
@@ -37,5 +36,5 @@ RewriteRule ^(.*)/$ /$1 [L,R=301]
   ExpiresByType image/svg+xml "access plus 1 year"
 </IfModule>
 
-# 6. 自定义 404 页面
+# 5. 自定义 404 页面
 ErrorDocument 404 /404.html

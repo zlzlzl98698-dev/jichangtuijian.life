@@ -1,56 +1,112 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>专线网络与代理协议架构实验室 | 从物理海缆到现代加密 - 机场life</title>
   <meta name="description" content="深入剖析 IPLC、IEPL、BGP 中转网络拓扑，对比 Shadowsocks、VLESS Reality、Hysteria2 等下一代代理协议的抗封锁机制。">
-  <link rel="canonical" href="/tech/">
+  <link rel="canonical" href="https://jichangtuijian.life/tech/">
   <meta name="robots" content="index, follow">
+  <link rel="icon" href="/images/avatar.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="/images/avatar.webp">
+
+  
+  
+  
+  
+  
 
   
   <meta property="og:type" content="website">
   <meta property="og:title" content="专线网络与代理协议架构实验室 | 从物理海缆到现代加密">
   <meta property="og:description" content="深入剖析 IPLC、IEPL、BGP 中转网络拓扑，对比 Shadowsocks、VLESS Reality、Hysteria2 等下一代代理协议的抗封锁机制。">
-  <meta property="og:url" content="http://localhost:1313/tech/">
+  <meta property="og:url" content="https://jichangtuijian.life/tech/">
   <meta property="og:site_name" content="机场life">
+  <meta property="og:image" content="https://jichangtuijian.life/images/avatar.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://jichangtuijian.life/images/avatar.webp">
 
   
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=1794289835">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "http:\/\/localhost:1313\/#website",
-      "url": "http:\/\/localhost:1313\/",
+      "@id": "https:\/\/jichangtuijian.life\/#website",
+      "url": "https:\/\/jichangtuijian.life\/",
       "name": "机场life",
       "description": "独立网络可观测性评测中心。深入评测42家主流机场，基于真实IEPL\/IPLC专线延迟、晚高峰吞吐与ChatGPT\/流媒体解锁数据，提供客观权威的选型知识图谱。",
-      "inLanguage": "zh-CN"
+      "inLanguage": "zh-CN",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https:\/\/jichangtuijian.life\/#organization",
+        "name": "机场life",
+        "url": "https:\/\/jichangtuijian.life\/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https:\/\/jichangtuijian.life\/images/avatar.webp"
+        }
+      }
     },
     {
+      "@type": "Organization",
+      "@id": "https:\/\/jichangtuijian.life\/#organization",
+      "name": "机场life",
+      "url": "https:\/\/jichangtuijian.life\/",
+      "logo": "https:\/\/jichangtuijian.life\/images/avatar.webp",
+      "description": "独立网络可观测性评测中心。深入评测42家主流机场，基于真实IEPL\/IPLC专线延迟、晚高峰吞吐与ChatGPT\/流媒体解锁数据，提供客观权威的选型知识图谱。"
+    }
+    
+    ,
+    {
       "@type": "BreadcrumbList",
-      "@id": "http:\/\/localhost:1313\/tech\/#breadcrumb",
+      "@id": "https:\/\/jichangtuijian.life\/tech\/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "首页",
-          "item": "http:\/\/localhost:1313\/"
+          "item": "https:\/\/jichangtuijian.life\/"
         }
         
         ,
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "tech",
-          "item": "http:\/\/localhost:1313\/tech/"
+          "name": "\"专线网络与代理协议架构实验室 | 从物理海缆到现代加密\"",
+          "item": "https:\/\/jichangtuijian.life\/tech\/"
         }
-        
         
       ]
     }
+    
+    
+    ,
+    {
+      "@type": "Article",
+      "@id": "https:\/\/jichangtuijian.life\/tech\/#article",
+      "isPartOf": {
+        "@id": "https:\/\/jichangtuijian.life\/#website"
+      },
+      "headline": "\"专线网络与代理协议架构实验室 | 从物理海缆到现代加密\"",
+      "description": "\"深入剖析 IPLC、IEPL、BGP 中转网络拓扑，对比 Shadowsocks、VLESS Reality、Hysteria2 等下一代代理协议的抗封锁机制。\"",
+      "mainEntityOfPage": "https:\/\/jichangtuijian.life\/tech\/",
+      "datePublished": "2026-11-09T23:00:00\u002b08:00",
+      "dateModified": "2026-11-09T23:00:00\u002b08:00",
+      "author": {
+        "@type": "Organization",
+        "name": "机场life 网络安全与可观测性实验室"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https:\/\/jichangtuijian.life\/#organization",
+        "name": "机场life",
+        "url": "https:\/\/jichangtuijian.life\/"
+      }
+    }
+    
     
   ]
 }
@@ -66,6 +122,7 @@
 <header class="site-header">
   <div class="header-container">
     <a href="/" class="logo-area">
+      <img src="/images/avatar.webp" alt="机场life" class="site-avatar" width="36" height="36" style="width:36px;height:36px;min-width:36px;max-width:36px;min-height:36px;max-height:36px;border-radius:50%;object-fit:cover;object-position:50% 25%;border:2px solid #00f0ff;box-shadow:0 0 10px rgba(0,240,255,0.4);flex-shrink:0;display:inline-block;">
       <span>机场life</span>
       <span class="logo-badge">LABS</span>
     </a>
@@ -74,32 +131,44 @@
       <ul class="nav-links">
         
         <li>
-          <a href="/brands/" class="">
-            🛸 机场评测库
+          <a href="/matrix/" class="">
+            🏆 42家推荐
           </a>
         </li>
         
         <li>
-          <a href="/tech/" class="active">
-            ⚡ 专线与协议架构
+          <a href="/trials/" class="">
+            🎁 免费试用
           </a>
         </li>
         
         <li>
-          <a href="/scenarios/" class="">
-            🎯 场景出海方案
+          <a href="/free-nodes/" class="">
+            🆓 免费节点
+          </a>
+        </li>
+        
+        <li>
+          <a href="/warnings/" class="">
+            🚨 跑路预警
+          </a>
+        </li>
+        
+        <li>
+          <a href="/faq/" class="">
+            ❓ 机场FAQ
           </a>
         </li>
         
         <li>
           <a href="/clients/" class="">
-            💻 客户端配置大全
+            💻 客户端教程
           </a>
         </li>
         
         <li>
           <a href="/methodology/" class="">
-            📊 可观测性与方法论
+            📊 评测白皮书
           </a>
         </li>
         
@@ -134,8 +203,18 @@
   <p>本专题专为追求极致网络性能的工程师、外贸团队与重度出海用户打造。我们从底层网络物理层、传输层与密码学应用角度，拆解为什么“专线”能在公网网络波动中保持坚如磐石的低延迟。</p>
 <h2 id="核心二级专题集群">核心二级专题集群</h2>
 <ul>
-<li><strong><a href="/tech/lines-topology/">IPLC/IEPL 专线网络拓扑与物理海缆路由深度解析</a></strong>：揭示企业级内网穿透与公网出口的本质差别；</li>
-<li><strong><a href="/tech/protocols/">现代代理协议演进：从 Shadowsocks 到 VLESS Reality 与 Hysteria2</a></strong>：了解特征消除、主动探测防御与 UDP 拥塞控制。</li>
+<li><strong>
+
+
+<a href="/tech/lines-topology/">IPLC/IEPL 专线网络拓扑与物理海缆路由深度解析</a>
+
+</strong>：揭示企业级内网穿透与公网出口的本质差别；</li>
+<li><strong>
+
+
+<a href="/tech/protocols/">现代代理协议演进：从 Shadowsocks 到 VLESS Reality 与 Hysteria2</a>
+
+</strong>：了解特征消除、主动探测防御与 UDP 拥塞控制。</li>
 </ul>
 
 </div>
@@ -157,7 +236,7 @@
         <a href="/tech/lines-topology/" style="color:inherit;text-decoration:none;">IPLC 与 IEPL 专线深度解析：跨境网络为何能做到晚高峰不拥堵？</a>
       </h3>
       <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.6;">
-        网络工程级白皮书：深入拆解 IPLC、IEPL、SD-WAN 跨境专线与 BGP 中转的物理网络拓扑、海缆过境路由、抗 QoS 丢包机制与端到端延迟模型。
+        网络工程级白皮书：深入拆解 IPLC、IEPL、SD-WAN 跨境专线与 BGP 中转的物理网络拓扑、海缆跨境路由、抗 QoS 丢包机制与端到端延迟模型。
       </p>
     </div>
     <div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.05);">
@@ -171,10 +250,10 @@
         2026-11-10
       </div>
       <h3 style="font-size:1.15rem;color:#fff;margin-bottom:0.6rem;">
-        <a href="/tech/protocols/" style="color:inherit;text-decoration:none;">代理协议演进白皮书：从 Shadowsocks 到 VLESS Reality 与 Hysteria2 密码学全景剖析</a>
+        <a href="/tech/protocols/" style="color:inherit;text-decoration:none;">代理协议演进白皮书：从 Shadowsocks 到 VLESS Reality 与 Hysteria2</a>
       </h3>
       <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.6;">
-        万字技术深度解析：系统梳理 Shadowsocks AEAD、VMess、Trojan、VLESS Reality 证书伪装及基于 QUIC 的 Hysteria2 弱网加速协议的底层握手特征与抗审查演进史。
+        万字技术深度解析：系统梳理 SS AEAD、VMess、Trojan、VLESS Reality 证书窃取伪装及 Hysteria2 (QUIC) 协议的密码学原理、报文特征与抗审查能力。
       </p>
     </div>
     <div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.05);">
