@@ -42,7 +42,7 @@ page = ["HTML"]
 [menu]
   [[menu.main]]
     identifier = "matrix"
-    name = "🏆 42家矩阵"
+    name = "🏆 42家推荐"
     url = "/matrix/"
     weight = 10
   [[menu.main]]
@@ -66,22 +66,12 @@ page = ["HTML"]
     url = "/faq/"
     weight = 50
   [[menu.main]]
-    identifier = "brands"
-    name = "🛸 品牌库"
-    url = "/brands/"
+    identifier = "clients"
+    name = "💻 客户端教程"
+    url = "/clients/"
     weight = 60
   [[menu.main]]
-    identifier = "tech"
-    name = "⚡ 专线协议"
-    url = "/tech/"
-    weight = 70
-  [[menu.main]]
-    identifier = "clients"
-    name = "💻 客户端"
-    url = "/clients/"
-    weight = 80
-  [[menu.main]]
     identifier = "about"
-    name = "📊 白皮书"
+    name = "📊 评测白皮书"
     url = "/methodology/"
-    weight = 90
+    weight = 70
