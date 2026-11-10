@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="article-wrapper" style="text-align:center;padding:5rem 1rem;">
+  <div style="font-size:4rem;margin-bottom:1rem;">🛰️</div>
+  <h1 style="font-size:2.2rem;color:#fff;margin-bottom:1rem;">404 // 探测到断开的链路节点</h1>
+  <p style="color:var(--text-muted);max-width:540px;margin:0 auto 2rem auto;line-height:1.6;">
+    您请求的页面路由不存在、可能已迁移或已被网络安全防线阻断。请检查 URL 拼写或通过下方导航返回核心观测集群。
+  </p>
+
+  <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:3rem;">
+    <a href="/" class="btn-cta" style="padding:0.75rem 1.5rem;">返回观测大盘首页</a>
+    <a href="/matrix/" class="btn-card-aff" style="padding:0.75rem 1.5rem;">查阅 42 家推荐矩阵</a>
+    <a href="/faq/" class="btn-card-detail" style="padding:0.75rem 1.5rem;">出海 100 问 FAQ</a>
+  </div>
+
+  <div style="max-width:600px;margin:0 auto;text-align:left;background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:1.5rem;">
+    <div style="font-size:0.9rem;font-weight:700;color:var(--accent-cyan);margin-bottom:0.75rem;">🧭 快速直达核心白皮书：</div>
+    <ul style="list-style:none;padding:0;margin:0;font-size:0.85rem;line-height:2.2;">
+      <li>• <a href="/trials/">🎁 2026 全网可验证机场免费试用与 1 元体验中心</a></li>
+      <li>• <a href="/free-nodes/">🆓 全球免费开源节点生态安全白皮书与可用性审计</a></li>
+      <li>• <a href="/warnings/">🚨 机场服务商跑路模型与破产预警白皮书</a></li>
+      <li>• <a href="/clients/">💻 全平台代理客户端下载与进阶配置大全</a></li>
+      <li>• <a href="/methodology/">📊 网络可观测性评测方法论与数据合规白皮书</a></li>
+    </ul>
+  </div>
+</div>
+{{ end }}

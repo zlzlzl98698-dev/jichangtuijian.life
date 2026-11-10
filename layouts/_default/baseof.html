@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Params.brandName }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.siteDescription }}{{ end }}">
-  <link rel="canonical" href="{{ .RelPermalink }}">
-  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta name="robots" content="{{ if or .Params.noindex (eq .Kind "404") }}noindex, nofollow{{ else }}index, follow{{ end }}">
   <link rel="icon" href="/images/avatar.webp" type="image/webp">
   <link rel="apple-touch-icon" href="/images/avatar.webp">
+
+  <!-- 搜索引擎验证代码预留 (Webmaster Verification) -->
+  {{ with .Site.Params.googleSiteVerification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.msvalidate }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.baiduSiteVerification }}<meta name="baidu-site-verification" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.shenmaSiteVerification }}<meta name="shenma-site-verification" content="{{ . }}">{{ end }}
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">

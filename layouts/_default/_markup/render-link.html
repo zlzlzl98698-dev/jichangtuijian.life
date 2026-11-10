@@ -1,0 +1,7 @@
+{{ $url := .Destination }}
+{{ $isExternal := or (strings.HasPrefix $url "http://") (strings.HasPrefix $url "https://") }}
+{{ if and $isExternal (not (strings.HasPrefix $url site.BaseURL)) }}
+<a href="{{ .Destination | safeURL }}" target="_blank" rel="nofollow sponsored noopener"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{ else }}
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{ end }}

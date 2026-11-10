@@ -3,14 +3,16 @@ locale = "zh-cn"
 title = "机场life | 42家主流专线机场权威评测与网络可观测性实验室"
 hasCJKLanguage = true
 summaryLength = 140
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
 
 [pagination]
-pagerSize = 12
+  pagerSize = 12
 
 [outputs]
-home = ["HTML", "RSS", "JSON"]
-section = ["HTML", "RSS"]
-page = ["HTML"]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]
 
 [markup]
   [markup.goldmark]
@@ -38,6 +40,12 @@ page = ["HTML"]
   topBrandUrl = "https://sahude.gsyvipaff.com/#/?code=keqgvT5Y"
   topBrandCoupon = "AMM"
   topBrandHighlight = "2020年稳定运营 · IEPL+内网专线 · VLESS协议 · 年付折合8元/月 · 晚高峰实测低抖动"
+  
+  # 搜索引擎所有权验证预留位 (Webmaster Verification Meta)
+  googleSiteVerification = ""
+  msvalidate = ""
+  baiduSiteVerification = ""
+  shenmaSiteVerification = ""
 
 [menu]
   [[menu.main]]
