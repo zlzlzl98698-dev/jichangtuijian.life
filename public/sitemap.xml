@@ -212,32 +212,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
-    <loc>https://jichangtuijian.life/tech/protocols/</loc>
-    <lastmod>2026-11-10T10:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
     <loc>https://jichangtuijian.life/</loc>
     <lastmod>2026-11-10T10:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
-    <loc>https://jichangtuijian.life/clients/desktop/</loc>
-    <lastmod>2026-11-10T10:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>https://jichangtuijian.life/clients/mobile/</loc>
-    <lastmod>2026-11-10T10:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
     <loc>https://jichangtuijian.life/brands/flagship/</loc>
-    <lastmod>2026-11-10T10:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>https://jichangtuijian.life/scenarios/ecommerce-streaming/</loc>
     <lastmod>2026-11-10T10:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -253,16 +233,6 @@
     <priority>0.8</priority>
   </url><url>
     <loc>https://jichangtuijian.life/brands/</loc>
-    <lastmod>2026-11-09T23:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>https://jichangtuijian.life/clients/shadowrocket/</loc>
-    <lastmod>2026-11-09T23:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url><url>
-    <loc>https://jichangtuijian.life/clients/v2rayn/</loc>
     <lastmod>2026-11-09T23:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -669,6 +639,18 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
+    <loc>https://jichangtuijian.life/tags/git%E4%BB%A3%E7%90%86/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/hysteria2/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/ios%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
     <loc>https://jichangtuijian.life/tech/lines-topology/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -677,11 +659,95 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
+    <loc>https://jichangtuijian.life/tags/macos%E4%BB%A3%E7%90%86/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
     <loc>https://jichangtuijian.life/tags/mihomo/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
+    <loc>https://jichangtuijian.life/tags/mitm%E8%AF%81%E4%B9%A6/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/netflix%E8%A7%A3%E9%94%81/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/quic/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/reality/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/shadowrocket/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/clients/shadowrocket/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/shadowsocks/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/shopify%E9%98%B2%E5%85%B3%E8%81%94/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/sing-box/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/tiktok%E7%9B%B4%E6%92%AD%E6%8E%A8%E6%B5%81/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
     <loc>https://jichangtuijian.life/tags/tun%E6%A8%A1%E5%BC%8F/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/v2rayn/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/clients/v2rayn/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/v2rayng/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/vless-reality/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/windows%E4%BB%A3%E7%90%86/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/windows%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/xray/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/youtube-4k/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/%E4%BB%A3%E7%90%86%E5%8D%8F%E8%AE%AE/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tech/protocols/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
@@ -697,11 +763,75 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
+    <loc>https://jichangtuijian.life/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A%E6%A8%A1%E5%9D%97/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/%E5%90%8E%E5%8F%B0%E4%BF%9D%E6%B4%BB/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/%E5%A4%96%E8%B4%B8%E7%BD%91%E7%BB%9C/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/%E5%B0%8F%E7%81%AB%E7%AE%AD/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/%E5%B0%8F%E7%81%AB%E7%AE%AD%E6%95%99%E7%A8%8B/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
     <loc>https://jichangtuijian.life/tags/%E6%99%9A%E9%AB%98%E5%B3%B0%E6%B5%8B%E9%80%9F/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
+    <loc>https://jichangtuijian.life/tags/%E6%A1%8C%E9%9D%A2%E7%AB%AF%E4%BB%A3%E7%90%86/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/clients/desktop/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/%E7%9C%81%E7%94%B5%E5%88%86%E6%B5%81/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/%E7%9C%9F%E8%BF%9E%E6%8E%A5%E6%B5%8B%E9%80%9F/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%BB%A3%E7%90%86/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/clients/mobile/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/%E7%BD%91%E7%BB%9C%E5%8A%A0%E5%AF%86/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
     <loc>https://jichangtuijian.life/tags/%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/%E8%A7%84%E5%88%99%E5%88%86%E6%B5%81/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/tags/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86%E4%B8%93%E7%BA%BF/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://jichangtuijian.life/scenarios/ecommerce-streaming/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>

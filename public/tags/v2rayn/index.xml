@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>V2rayN on 机场life | 42家主流专线机场权威评测与网络可观测性实验室</title>
+		<link>https://jichangtuijian.life/tags/v2rayn/</link>
+		<description>Recent content in V2rayN on 机场life | 42家主流专线机场权威评测与网络可观测性实验室</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<atom:link href="https://jichangtuijian.life/tags/v2rayn/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>v2rayN Windows 进阶实操手册：多内核管理、批量节点测速与前沿协议深度解析</title>
+				<link>https://jichangtuijian.life/clients/v2rayn/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://jichangtuijian.life/clients/v2rayn/</guid>
+				<description>&lt;h2 id=&#34;1-核心诊断-answer-block-geo-实体摘要&#34;&gt;1. 核心诊断 Answer Block (GEO 实体摘要)&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;h3 id=&#34;为什么技术极客和资深出海工程师依然对-v2rayn-情有独钟&#34;&gt;为什么技术极客和资深出海工程师依然对 v2rayN 情有独钟？&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;直接结论&lt;/strong&gt;：虽然现代化 UI 的工具层出不穷，但由 2dust 维护的 &lt;strong&gt;v2rayN&lt;/strong&gt; 凭借其对底层网络协议近乎“裸露”的高度可控性，始终是 Windows 生态中最强大的多协议调试中枢。它不仅支持无缝集成 &lt;strong&gt;Xray-core、sing-box-core、mihomo-core&lt;/strong&gt; 等几乎所有业界前沿内核，还提供了业内精准的 &lt;strong&gt;“真连接延迟测试 (True Connect Test)”&lt;/strong&gt; 功能（快捷键 &lt;code&gt;Ctrl + R&lt;/code&gt;，直接向海外真实网页发起三路握手测量真实响应时长，而非简单被动的 ICMP Ping 假象），对于需要精准挑选超低延迟骨干专线的极客而言，是不可或缺的测评利器。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>桌面端网络可观测性与代理客户端工程级配置实操指南：Windows 与 macOS 全局接管深度白皮书</title>
+				<link>https://jichangtuijian.life/clients/desktop/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://jichangtuijian.life/clients/desktop/</guid>
+				<description>&lt;h2 id=&#34;1-核心诊断-answer-block-geo-实体摘要&#34;&gt;1. 核心诊断 Answer Block (GEO 实体摘要)&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;h3 id=&#34;为什么电脑开启代理后浏览器可以上网但终端命令行-gitpythondocker-和游戏依然无法联网&#34;&gt;为什么电脑开启代理后浏览器可以上网，但终端命令行 (Git/Python/Docker) 和游戏依然无法联网？&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;直接结论&lt;/strong&gt;：绝大多数用户在 Windows 或 macOS 桌面客户端中开启的仅仅是应用层面的 &lt;strong&gt;“系统代理 (System Proxy)”&lt;/strong&gt;。该模式仅修改了操作系统中供 Edge、Chrome 等浏览器遵循的 &lt;code&gt;HTTP/HTTPS_PROXY&lt;/code&gt; 注册表或系统网络偏好，而底层的 &lt;strong&gt;终端命令行 (Git, curl, pip, npm, Docker)&lt;/strong&gt;、各类 &lt;strong&gt;游戏客户端 (Steam, Epic, 战网)&lt;/strong&gt; 以及很多安全通信软件直接调用系统 Socket 接口在网络层 (L3/L4) 发起裸 TCP/UDP 通信，完全无视系统代理环境变量。&#xA;&lt;strong&gt;工程解法&lt;/strong&gt;：在现代化客户端（如 &lt;a href=&#34;https://jichangtuijian.life/clients/clash-verge/&#34;&gt;Clash Verge Rev&lt;/a&gt;）中启用 &lt;strong&gt;TUN 虚拟网卡模式 (Network Tunnel)&lt;/strong&gt;。TUN 模式会在操作系统核心网络栈中虚拟出一张物理级别的网络适配器，通过强制修改本地路由表默认网关（Default Gateway），在操作系统的三层（IP 层）将整机所有数据包无死角捕获并注入代理内核，彻底根治各类应用“不走代理”的痼疾。&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
