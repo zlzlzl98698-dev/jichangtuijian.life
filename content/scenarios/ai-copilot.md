@@ -2,6 +2,7 @@
 title: "ChatGPT 与 Claude 开发者专属节点指南：彻底解决 1020 报错与账号风控"
 description: "AI 出海网络实战白皮书：深入拆解 OpenAI 与 Anthropic Claude 的机房 IP 黑名单、Fraud Score 欺诈评分算法、WebRTC 泄漏与分流规则最佳实践。"
 slug: "ai-copilot"
+date: "2026-11-10T10:00:00+08:00"
 datePublished: "2026-11-10T10:00:00+08:00"
 dateModified: "2026-11-10T10:50:00+08:00"
 author: "机场life 可观测性实验室"

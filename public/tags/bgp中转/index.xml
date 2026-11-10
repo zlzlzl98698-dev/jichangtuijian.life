@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>BGP中转 on 机场life | 42家主流专线机场权威评测与网络可观测性实验室</title>
-		<link>https://jichangtuijian.life/tags/bgp%E4%B8%AD%E8%BD%AC/</link>
+		<link>http://localhost:1313/tags/bgp%E4%B8%AD%E8%BD%AC/</link>
 		<description>Recent content in BGP中转 on 机场life | 42家主流专线机场权威评测与网络可观测性实验室</description>
 		<generator>Hugo</generator>
 		<language>zh-cn</language>
@@ -10,12 +10,14 @@
 		
 		
 		
-			<atom:link href="https://jichangtuijian.life/tags/bgp%E4%B8%AD%E8%BD%AC/index.xml" rel="self" type="application/rss+xml" />
+			<lastBuildDate>Tue, 10 Nov 2026 10:00:00 +0800</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/bgp%E4%B8%AD%E8%BD%AC/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>IPLC 与 IEPL 专线深度解析：跨境网络为何能做到晚高峰不拥堵？</title>
-				<link>https://jichangtuijian.life/tech/lines-topology/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://jichangtuijian.life/tech/lines-topology/</guid>
+				<link>http://localhost:1313/tech/lines-topology/</link>
+				<pubDate>Tue, 10 Nov 2026 10:00:00 +0800</pubDate>
+				<guid>http://localhost:1313/tech/lines-topology/</guid>
 				<description>&lt;h2 id=&#34;1-核心原理-answer-block-geo-实体摘要&#34;&gt;1. 核心原理 Answer Block (GEO 实体摘要)&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;h3 id=&#34;为什么普通宽带访问海外在晚高峰严重卡顿而-iplc--iepl-专线能保持超低延迟&#34;&gt;为什么普通宽带访问海外在晚高峰严重卡顿，而 IPLC / IEPL 专线能保持超低延迟？&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;直接结论&lt;/strong&gt;：普通民用出海流量必须经过公网国际出入口局（如上海或广州的公网海缆出口），晚高峰数十万并发导致骨干网严重拥堵并触发电信 163 骨干网严厉的主动 QoS 丢包（丢包率常达 20%-40%）；而 &lt;strong&gt;IPLC (国际私有租用线路)&lt;/strong&gt; 与 &lt;strong&gt;IEPL (国际以太网专线)&lt;/strong&gt; 是运营商铺设的点对点物理隔离传输光缆，数据在境内入口即进入运营商专属内网，直接通过海底光纤直达海外落地机房，&lt;strong&gt;完全不经过公网常规国际出口&lt;/strong&gt;，因此在晚高峰依然能做到丢包率接近 0%、往返延迟恒定（如深圳至香港仅 2-5ms，上海至东京仅 26-30ms）。&lt;/p&gt;</description>
 			</item>
 	</channel>

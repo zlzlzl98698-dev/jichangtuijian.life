@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>微风网络 on 机场life | 42家主流专线机场权威评测与网络可观测性实验室</title>
-		<link>https://jichangtuijian.life/tags/%E5%BE%AE%E9%A3%8E%E7%BD%91%E7%BB%9C/</link>
+		<link>http://localhost:1313/tags/%E5%BE%AE%E9%A3%8E%E7%BD%91%E7%BB%9C/</link>
 		<description>Recent content in 微风网络 on 机场life | 42家主流专线机场权威评测与网络可观测性实验室</description>
 		<generator>Hugo</generator>
 		<language>zh-cn</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Tue, 10 Nov 2026 10:00:00 +0800</lastBuildDate>
 		
-			<atom:link href="https://jichangtuijian.life/tags/%E5%BE%AE%E9%A3%8E%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/%E5%BE%AE%E9%A3%8E%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>微风网络怎么样？2026最新评测、测速数据与选型优缺点深度报告</title>
-				<link>https://jichangtuijian.life/brands/weifeng/</link>
+				<link>http://localhost:1313/brands/weifeng/</link>
 				<pubDate>Mon, 19 Oct 2026 10:00:00 +0800</pubDate>
-				<guid>https://jichangtuijian.life/brands/weifeng/</guid>
+				<guid>http://localhost:1313/brands/weifeng/</guid>
 				<description>&lt;h2 id=&#34;1-核心选型结论与综合审计摘要-executive-summary&#34;&gt;1. 核心选型结论与综合审计摘要 (Executive Summary)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;微风网络&lt;/strong&gt; 在本站 42 家机场评测知识库中综合排名 &lt;strong&gt;第 4 位&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;核心定位&lt;/strong&gt;：IEPL 内网专线；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;入门成本&lt;/strong&gt;：最低入门价格为 &lt;strong&gt;¥7/月 (年付折合)&lt;/strong&gt;；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;专属优惠权益&lt;/strong&gt;：结账时输入专属优惠码 &lt;code&gt;flat888&lt;/code&gt; 可享受折扣减免；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;协议兼容性&lt;/strong&gt;：支持 &lt;strong&gt;Shadowsocks / VLESS&lt;/strong&gt;，兼容 Clash Verge Rev、v2rayN、Shadowrocket 等全平台现代客户端；&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;整体评价结论&lt;/strong&gt;：老牌专线代表，7元档高性价比，全IEPL内网专线架构，配合新用户9折优惠码，网络延迟表现平稳，丢包率极低。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;2-价格体系与套餐档位横评&#34;&gt;2. 价格体系与套餐档位横评&lt;/h2&gt;&#xA;&lt;p&gt;微风网络 针对不同用户场景设计了多梯度的订阅方案：&lt;/p&gt;</description>
 			</item>
 	</channel>

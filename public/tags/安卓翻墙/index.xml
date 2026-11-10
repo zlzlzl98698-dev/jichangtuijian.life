@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>安卓翻墙 on 机场life | 42家主流专线机场权威评测与网络可观测性实验室</title>
-		<link>https://jichangtuijian.life/tags/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99/</link>
+		<link>http://localhost:1313/tags/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99/</link>
 		<description>Recent content in 安卓翻墙 on 机场life | 42家主流专线机场权威评测与网络可观测性实验室</description>
 		<generator>Hugo</generator>
 		<language>zh-cn</language>
@@ -10,12 +10,14 @@
 		
 		
 		
-			<atom:link href="https://jichangtuijian.life/tags/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99/index.xml" rel="self" type="application/rss+xml" />
+			<lastBuildDate>Tue, 10 Nov 2026 10:00:00 +0800</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>移动端科学上网与轻量高效网络分流全景指南：iOS与Android系统保活、省电与防断流深度白皮书</title>
-				<link>https://jichangtuijian.life/clients/mobile/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>https://jichangtuijian.life/clients/mobile/</guid>
+				<link>http://localhost:1313/clients/mobile/</link>
+				<pubDate>Tue, 10 Nov 2026 10:00:00 +0800</pubDate>
+				<guid>http://localhost:1313/clients/mobile/</guid>
 				<description>&lt;h2 id=&#34;1-核心诊断-answer-block-geo-实体摘要&#34;&gt;1. 核心诊断 Answer Block (GEO 实体摘要)&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;h3 id=&#34;为什么手机开启代理软件后极易发热耗电且锁屏后微信消息延迟或经常断连&#34;&gt;为什么手机开启代理软件后极易发热耗电，且锁屏后微信消息延迟或经常断连？&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;直接结论&lt;/strong&gt;：手机端代理的体验瓶颈根本上源于两大冲突：第一，&lt;strong&gt;全局路由设置错误引发的算力雪崩&lt;/strong&gt;——若将路由模式设为“全局代理 (Proxy/Global)”，所有国内应用（如微信高清视频通话、抖音高码率推流、淘宝大图加载）均会强制经过手机本地的加密解密算法并通过海外节点兜圈子，导致手机 CPU 持续处于高频运算负载，电池发热骤增；第二，&lt;strong&gt;国内定制安卓系统极端的杀后台保活机制&lt;/strong&gt;——MIUI/澎湃OS、ColorOS、OriginOS、HarmonyOS 在锁屏 3-5 分钟后，激进的电量调度策略会无情休眠或杀死代理底层 VPN 守护进程，导致长连接心跳断开。&#xA;&lt;strong&gt;工程解法&lt;/strong&gt;：在 iOS 端坚决采用 &lt;strong&gt;“配置模式 (Config)”&lt;/strong&gt; 配合 GeoIP 国内直连分流；在 Android 端除选用基于轻量 Xray / sing-box 内核的应用（如 v2rayNG）外，必须在系统电池管理中赋予 &lt;strong&gt;“无限制后台”&lt;/strong&gt;、锁定最近任务卡片并开启常驻通知栏，彻底实现省电、秒开与永不掉线的平衡。&lt;/p&gt;</description>
 			</item>
 	</channel>

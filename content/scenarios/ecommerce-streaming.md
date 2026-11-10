@@ -2,6 +2,7 @@
 title: "跨境电商出海独立站与全球 4K 流媒体高可用网络搭建全景白皮书"
 description: "万字落地实战指南：深入拆解 TikTok 跨境直播推流防封锁、Shopify/Amazon 多店铺防关联网络隔离方案，以及 Netflix、Disney+、YouTube 4K/8K 超清流媒体原生音画零卡顿选型指南。"
 slug: "ecommerce-streaming"
+date: "2026-11-10T10:00:00+08:00"
 datePublished: "2026-11-10T10:00:00+08:00"
 dateModified: "2026-11-10T11:05:00+08:00"
 author: "机场life 可观测性实验室"

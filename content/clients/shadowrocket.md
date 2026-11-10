@@ -2,6 +2,7 @@
 title: "Shadowrocket (小火箭) 完整配置指南：iOS 首选科学上网神器的极致实操手册"
 description: "万字实战白皮书：iPhone 与 iPad 必备出海工具 Shadowrocket 从外区 Apple ID 获取、订阅自动导入、策略组优选、MitM 证书安装到去广告模块与规则编写全景精解。"
 slug: "shadowrocket"
+date: "2026-11-10T10:00:00+08:00"
 datePublished: "2026-11-10T10:00:00+08:00"
 dateModified: "2026-11-10T11:05:00+08:00"
 author: "机场life 可观测性实验室"

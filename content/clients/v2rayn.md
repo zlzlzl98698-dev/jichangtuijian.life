@@ -2,6 +2,7 @@
 title: "v2rayN Windows 进阶实操手册：多内核管理、批量节点测速与前沿协议深度解析"
 description: "万字资深技术指南：详解 Windows 经典代理利器 v2rayN 的 Xray/sing-box 内核切换、真连接延迟（TCP Ping）压测、VLESS Reality 节点手动配置与高级路由自定义。"
 slug: "v2rayn"
+date: "2026-11-10T10:00:00+08:00"
 datePublished: "2026-11-10T10:00:00+08:00"
 dateModified: "2026-11-10T11:05:00+08:00"
 author: "机场life 可观测性实验室"

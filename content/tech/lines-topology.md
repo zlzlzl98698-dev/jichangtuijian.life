@@ -2,6 +2,7 @@
 title: "IPLC 与 IEPL 专线深度解析：跨境网络为何能做到晚高峰不拥堵？"
 description: "网络工程级白皮书：深入拆解 IPLC、IEPL、SD-WAN 跨境专线与 BGP 中转的物理网络拓扑、海缆过境路由、抗 QoS 丢包机制与端到端延迟模型。"
 slug: "lines-topology"
+date: "2026-11-10T10:00:00+08:00"
 datePublished: "2026-11-10T10:00:00+08:00"
 dateModified: "2026-11-10T10:50:00+08:00"
 author: "机场life 可观测性实验室"

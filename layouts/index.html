@@ -124,7 +124,7 @@
               <span class="badge-top10">TOP 10 推荐</span>
               {{ end }}
             </div>
-            <h3 class="brand-name"><a href="{{ .Permalink }}">{{ .Params.brandName | default .Title }}</a></h3>
+            <h3 class="brand-name"><a href="{{ .RelPermalink }}">{{ .Params.brandName | default .Title }}</a></h3>
           </div>
           <span class="status-badge {{ if eq .Params.dataStatus "measured" }}status-measured{{ else }}status-vendor{{ end }}">
             {{ if eq .Params.dataStatus "measured" }}实测数据{{ else }}官方宣称{{ end }}
@@ -158,7 +158,7 @@
           {{ .Params.priceHighlight | default "品质选型" }}
         </div>
         <div class="footer-actions">
-          <a href="{{ .Permalink }}" class="btn-card-detail">万字测评</a>
+          <a href="{{ .RelPermalink }}" class="btn-card-detail">万字测评</a>
           {{ with .Params.affUrl }}
           <a href="{{ . }}" target="_blank" rel="nofollow sponsored noopener" class="btn-card-aff">直达官网</a>
           {{ end }}

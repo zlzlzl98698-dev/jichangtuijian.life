@@ -2,6 +2,7 @@
 title: "Clash Verge Rev 完整实操教程：Mihomo 内核安装、TUN 虚拟网卡与规则分流避坑指南"
 description: "面向全平台的 Clash Verge Rev 深度教程：从 GitHub 官方下载、Mihomo 内核切换、TUN 虚拟网卡开启解决终端代理失效，到防止 DNS 污染与 OpenAI 规则分流。"
 slug: "clash-verge"
+date: "2026-11-09T10:00:00+08:00"
 datePublished: "2026-11-09T10:00:00+08:00"
 dateModified: "2026-11-10T10:50:00+08:00"
 author: "机场life 可观测性实验室"

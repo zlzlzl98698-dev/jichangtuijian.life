@@ -2,6 +2,7 @@
 title: "移动端科学上网与轻量高效网络分流全景指南：iOS与Android系统保活、省电与防断流深度白皮书"
 description: "万字长文深度指南：涵盖 iPhone (Shadowrocket 小火箭 / Stash / 圈X) 与 Android (v2rayNG / FlClash) 的场景化配置、国产系统后台保活、省电策略、防 DNS 污染与 5G/Wi-Fi 无缝切换避坑全解。"
 slug: "mobile"
+date: "2026-11-10T10:00:00+08:00"
 datePublished: "2026-11-10T10:00:00+08:00"
 dateModified: "2026-11-10T11:05:00+08:00"
 author: "机场life 可观测性实验室"

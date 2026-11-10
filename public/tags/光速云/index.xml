@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>光速云 on 机场life | 42家主流专线机场权威评测与网络可观测性实验室</title>
-		<link>https://jichangtuijian.life/tags/%E5%85%89%E9%80%9F%E4%BA%91/</link>
+		<link>http://localhost:1313/tags/%E5%85%89%E9%80%9F%E4%BA%91/</link>
 		<description>Recent content in 光速云 on 机场life | 42家主流专线机场权威评测与网络可观测性实验室</description>
 		<generator>Hugo</generator>
 		<language>zh-cn</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Tue, 10 Nov 2026 10:00:00 +0800</lastBuildDate>
 		
-			<atom:link href="https://jichangtuijian.life/tags/%E5%85%89%E9%80%9F%E4%BA%91/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/%E5%85%89%E9%80%9F%E4%BA%91/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>光速云怎么样？2026最新深度评测、晚高峰测速报告与双专线选型白皮书</title>
-				<link>https://jichangtuijian.life/brands/guangsu/</link>
+				<link>http://localhost:1313/brands/guangsu/</link>
 				<pubDate>Mon, 19 Oct 2026 10:00:00 +0800</pubDate>
-				<guid>https://jichangtuijian.life/brands/guangsu/</guid>
+				<guid>http://localhost:1313/brands/guangsu/</guid>
 				<description>&lt;h2 id=&#34;1-核心选型结论与综合审计摘要-executive-summary&#34;&gt;1. 核心选型结论与综合审计摘要 (Executive Summary)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;光速云 (Guangsu Cloud)&lt;/strong&gt; 在本实验室 42 家主流机场综合可观测性评测体系中&lt;strong&gt;位列第一（综合推荐榜首位）&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;实验室权威判定&lt;/strong&gt;：&#xA;光速云是目前出海网络服务中极少数将**“企业级内网专线”&lt;strong&gt;、&lt;/strong&gt;“VLESS 现代加密协议”&lt;strong&gt;与&lt;/strong&gt;“平民化价格门槛”&lt;strong&gt;完美融合的成熟品牌。其自 2020 年上线运营至今已有超过 4 年连续运行记录，在行业高流动性与频繁跑路的背景下展现了极高的稳定性。其独创的&lt;/strong&gt;“致敬斯诺克 147 永久套餐”**（一次性付 147 元获 247GB 永久流量）以及年付轻量版仅 99 元/年（折合每月仅约 8 元），为追求高可靠性但用量中等的用户提供了无与伦比的投资回报率。&lt;/p&gt;</description>
 			</item>
 	</channel>

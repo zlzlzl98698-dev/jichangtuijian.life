@@ -2,6 +2,7 @@
 title: "桌面端网络可观测性与代理客户端工程级配置实操指南：Windows 与 macOS 全局接管深度白皮书"
 description: "万字技术深度指南：系统拆解 Windows 与 macOS 系统代理底层机制、TUN 虚拟网卡技术、Git/Docker/命令行终端代理失效排查、防 DNS 污染与全场景网络调试。"
 slug: "desktop"
+date: "2026-11-10T10:00:00+08:00"
 datePublished: "2026-11-10T10:00:00+08:00"
 dateModified: "2026-11-10T11:05:00+08:00"
 author: "机场life 可观测性实验室"

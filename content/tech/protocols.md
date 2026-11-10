@@ -2,6 +2,7 @@
 title: "代理协议演进白皮书：从 Shadowsocks 到 VLESS Reality 与 Hysteria2 密码学全景剖析"
 description: "万字技术深度解析：系统梳理 Shadowsocks AEAD、VMess、Trojan、VLESS Reality 证书伪装及基于 QUIC 的 Hysteria2 弱网加速协议的底层握手特征与抗审查演进史。"
 slug: "protocols"
+date: "2026-11-10T10:00:00+08:00"
 datePublished: "2026-11-10T10:00:00+08:00"
 dateModified: "2026-11-10T11:05:00+08:00"
 author: "机场life 可观测性实验室"
