@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "baiyueguang"
 description: "深度评测 白月光：平稳中端专线，主打影音流媒体解锁与长周期稳定性。 涵盖最新套餐价格表、专线隧道网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 31
+weight: 31
+brandName: "白月光"
+isTop10: false
 operationalSince: "2023年"
 lineType: "专线隧道"
 protocols: "Shadowsocks"

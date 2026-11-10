@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "lingmao"
 description: "深度评测 灵猫网络：19元150GB大流量套餐，且提供不限时不过期流量包，灵活性突出。 涵盖最新套餐价格表、BGP 中转专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 13
+weight: 13
+brandName: "灵猫网络"
+isTop10: false
 operationalSince: "2023年"
 lineType: "BGP 中转专线"
 protocols: "Shadowsocks"

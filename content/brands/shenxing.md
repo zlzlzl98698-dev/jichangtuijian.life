@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "shenxing"
 description: "深度评测 神行加速：14元享120GB，性价比梯度合理，适合中度出海需求。 涵盖最新套餐价格表、BGP 智能中转网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 25
+weight: 25
+brandName: "神行加速"
+isTop10: false
 operationalSince: "2023年"
 lineType: "BGP 智能中转"
 protocols: "Shadowsocks"

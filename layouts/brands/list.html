@@ -6,7 +6,7 @@
   </div>
   <h1 class="article-title">{{ .Title | default "42家主流机场品牌性能评测库" }}</h1>
   <p class="hero-desc">
-    基于真实测速抓包、晚高峰抖动监控及流媒体/AI 原生 IP 解锁审计，构建业界首个透明可验证的机场选型知识图谱。严禁编造任何虚假数据。
+    基于真实测速抓包、晚高峰抖动监控及流媒体/AI 原生 IP 解锁审计，构建业界首个透明可验证的机场选型知识图谱。按照运营信誉与线路品质严格排序，前十核心推荐梯队优先展示。
   </p>
 </div>
 
@@ -20,8 +20,10 @@
 </div>
 
 <div class="brand-grid">
-  {{ range .Pages }}
-  <div class="brand-card" 
+  {{ $brands := where .Site.RegularPages "Section" "brands" }}
+  {{ $brands = where $brands "Params.rank" "ge" 1 }}
+  {{ range (sort $brands "Params.rank" "asc") }}
+  <div class="brand-card {{ if .Params.isTop10 }}top10-highlight{{ end }}" 
        data-status="{{ .Params.dataStatus | default "vendor" }}" 
        data-line="{{ .Params.lineType | default "" }}" 
        data-price="{{ .Params.startingPriceNum | default 20 }}"
@@ -30,8 +32,15 @@
     <div>
       <div class="brand-card-header">
         <div>
-          <span class="brand-rank">#{{ .Params.rank | default "评测" }}</span>
-          <h3 class="brand-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.25rem;">
+            <span class="brand-rank {{ if .Params.isTop10 }}rank-top10{{ end }}">#{{ printf "%02d" .Params.rank }}</span>
+            {{ if eq .Params.rank 1 }}
+            <span class="badge-featured">⭐ 第一主推</span>
+            {{ else if .Params.isTop10 }}
+            <span class="badge-top10">TOP 10 推荐</span>
+            {{ end }}
+          </div>
+          <h3 class="brand-name"><a href="{{ .Permalink }}">{{ .Params.brandName | default .Title }}</a></h3>
         </div>
         <span class="status-badge {{ if eq .Params.dataStatus "measured" }}status-measured{{ else }}status-vendor{{ end }}">
           {{ if eq .Params.dataStatus "measured" }}实测数据{{ else }}官方宣称{{ end }}

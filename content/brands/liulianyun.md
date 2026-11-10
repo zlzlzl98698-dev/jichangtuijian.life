@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "liulianyun"
 description: "深度评测 榴莲云：超轻量低单价方案，适合查资料与文字通信。 涵盖最新套餐价格表、经济型中转网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 24
+weight: 24
+brandName: "榴莲云"
+isTop10: false
 operationalSince: "2023年"
 lineType: "经济型中转"
 protocols: "Shadowsocks"

@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "weifeng"
 description: "深度评测 微风网络：老牌专线代表，7元档高性价比，全IEPL内网专线架构，配合新用户9折优惠码，网络延迟表现平稳，丢包率极低。 涵盖最新套餐价格表、IEPL 内网专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 4
+weight: 4
+brandName: "微风网络"
+isTop10: true
 operationalSince: "2022年"
 lineType: "IEPL 内网专线"
 protocols: "Shadowsocks / VLESS"

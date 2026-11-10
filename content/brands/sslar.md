@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "sslar"
 description: "深度评测 sslar：企业级IEPL与多线BGP自适应，自研多端客户端并支持远程桌面协助。 涵盖最新套餐价格表、企业级 IEPL + 多线 BGP网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 42
+weight: 42
+brandName: "sslar"
+isTop10: false
 operationalSince: "2023年"
 lineType: "企业级 IEPL + 多线 BGP"
 protocols: "Shadowsocks / VLESS"

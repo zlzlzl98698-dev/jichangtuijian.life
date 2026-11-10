@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "qingyunti"
 description: "深度评测 青云梯：运营6年以上老牌（原V4Speed），SS+企业级IPLC三网优化，支持企业定制。 涵盖最新套餐价格表、企业级 IPLC 专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 36
+weight: 36
+brandName: "青云梯"
+isTop10: false
 operationalSince: "2023年"
 lineType: "企业级 IPLC 专线"
 protocols: "Shadowsocks"

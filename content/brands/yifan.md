@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "yifan"
 description: "深度评测 一翻云：20元150GB大带宽套餐，测速实测中香港与日本节点表现亮眼。 涵盖最新套餐价格表、BGP 智能中转网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 16
+weight: 16
+brandName: "一翻云"
+isTop10: false
 operationalSince: "2023年"
 lineType: "BGP 智能中转"
 protocols: "Shadowsocks"

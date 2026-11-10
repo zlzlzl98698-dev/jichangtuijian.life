@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "weitu"
 description: "深度评测 唯兔云：拥有 60+ 优质节点，针对电信、联通、移动三网进行智能负载均衡调度，抗封锁与抗网络波动能力优秀。 涵盖最新套餐价格表、三网优化 + 智能负载均衡专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 9
+weight: 9
+brandName: "唯兔云"
+isTop10: true
 operationalSince: "2022年"
 lineType: "三网优化 + 智能负载均衡专线"
 protocols: "Shadowsocks"

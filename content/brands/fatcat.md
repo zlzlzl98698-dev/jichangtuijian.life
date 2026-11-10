@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "fatcat"
 description: "深度评测 FATCAT：老牌机场之一，节点池深厚，抗封锁能力较强。 涵盖最新套餐价格表、专线出口网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 34
+weight: 34
+brandName: "FATCAT"
+isTop10: false
 operationalSince: "2023年"
 lineType: "专线出口"
 protocols: "Shadowsocks"

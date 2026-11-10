@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "yuzhou"
 description: "深度评测 宇宙云：采用 IEPL + VLESS 架构并配备自研客户端，节点延迟均衡，实测晚高峰丢包率低。 涵盖最新套餐价格表、IEPL + VLESS 专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 11
+weight: 11
+brandName: "宇宙云"
+isTop10: false
 operationalSince: "2023年"
 lineType: "IEPL + VLESS 专线"
 protocols: "VLESS"

@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "sujie"
 description: "深度评测 速界：品牌资料特别针对 AI 工具交互优化，实测连通率稳定。 涵盖最新套餐价格表、专线优化网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 19
+weight: 19
+brandName: "速界"
+isTop10: false
 operationalSince: "2023年"
 lineType: "专线优化"
 protocols: "Shadowsocks"

@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "langwang"
 description: "深度评测 浪网：IEPL专线定位，覆盖入门、进阶、高端商业套餐与定制线路。 涵盖最新套餐价格表、IEPL 专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 39
+weight: 39
+brandName: "浪网"
+isTop10: false
 operationalSince: "2023年"
 lineType: "IEPL 专线"
 protocols: "Shadowsocks"

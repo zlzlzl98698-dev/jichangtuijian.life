@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "guangnian"
 description: "深度评测 光年梯：18元110GB均衡配比，晚高峰连通性高，测速表现稳定。 涵盖最新套餐价格表、专线中转网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 15
+weight: 15
+brandName: "光年梯"
+isTop10: false
 operationalSince: "2023年"
 lineType: "专线中转"
 protocols: "Shadowsocks"

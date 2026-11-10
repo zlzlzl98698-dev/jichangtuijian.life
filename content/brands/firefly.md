@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "firefly"
 description: "深度评测 Firefly：主推 IPLC 纯专线与 VLESS 架构，国内免翻墙直接访问官网，新用户 8 折，原生 IP 支持主流 AI 工具。 涵盖最新套餐价格表、IPLC 纯专线 + VLESS网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 10
+weight: 10
+brandName: "Firefly"
+isTop10: true
 operationalSince: "2021年"
 lineType: "IPLC 纯专线 + VLESS"
 protocols: "VLESS / Shadowsocks"

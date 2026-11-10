@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "jilian"
 description: "深度评测 极连云：18元100GB，实测节点覆盖亚洲核心区，品牌资料强调覆盖 AI 大模型工具访问。 涵盖最新套餐价格表、IEPL 优化专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 14
+weight: 14
+brandName: "极连云"
+isTop10: false
 operationalSince: "2023年"
 lineType: "IEPL 优化专线"
 protocols: "Shadowsocks"

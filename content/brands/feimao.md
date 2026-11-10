@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "feimao"
 description: "深度评测 飞猫云：主打轻快连接与新手免配置体验的专线机场。提供专属客户端，下载登录即用无需手动导入订阅，学生版年付仅84元折合7元/月，新手入门首选。 涵盖最新套餐价格表、高速中转 + 专线出口网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 3
+weight: 3
+brandName: "飞猫云"
+isTop10: true
 operationalSince: "2023年"
 lineType: "高速中转 + 专线出口"
 protocols: "Shadowsocks / Trojan"

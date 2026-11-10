@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "muguang"
 description: "深度评测 暮光加速：2023年运营的多设备协同型专线机场。主打 BGP 智能调度和专线级低延迟出口，提供 7×24 小时真人客服支持，多设备同时在线无压力，非常适合远程团队与多终端用户。 涵盖最新套餐价格表、BGP 智能调度 + 专线级出口网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 2
+weight: 2
+brandName: "暮光加速"
+isTop10: true
 operationalSince: "2023年"
 lineType: "BGP 智能调度 + 专线级出口"
 protocols: "Shadowsocks / VLESS"

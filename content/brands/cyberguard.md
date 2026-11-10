@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "cyberguard"
 description: "深度评测 CyberGuard：面向技术极客与海外工程师的专线服务，节点质量高。 涵盖最新套餐价格表、IEPL 企业级专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 29
+weight: 29
+brandName: "CyberGuard"
+isTop10: false
 operationalSince: "2023年"
 lineType: "IEPL 企业级专线"
 protocols: "Trojan / VLESS"

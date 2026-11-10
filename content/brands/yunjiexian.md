@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "yunjiexian"
 description: "深度评测 云界线：平价梯队，适合低预算应急或多设备备用。 涵盖最新套餐价格表、经济型中转网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 23
+weight: 23
+brandName: "云界线"
+isTop10: false
 operationalSince: "2023年"
 lineType: "经济型中转"
 protocols: "Shadowsocks"

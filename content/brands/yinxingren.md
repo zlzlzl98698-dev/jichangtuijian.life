@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "yinxingren"
 description: "深度评测 隐形人：60+节点详细清单，提供自研客户端与快速修复机制，不提供第三方通用订阅。 涵盖最新套餐价格表、专线私有接入网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 27
+weight: 27
+brandName: "隐形人"
+isTop10: false
 operationalSince: "2023年"
 lineType: "专线私有接入"
 protocols: "自研专有协议"

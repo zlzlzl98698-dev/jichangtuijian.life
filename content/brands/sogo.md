@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "sogo"
 description: "深度评测 SOGO云：2026年新锐品牌，主打低延迟与新节点不拥堵，实测速率优秀。 涵盖最新套餐价格表、中转优化线路网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 17
+weight: 17
+brandName: "SOGO云"
+isTop10: false
 operationalSince: "2023年"
 lineType: "中转优化线路"
 protocols: "Shadowsocks"

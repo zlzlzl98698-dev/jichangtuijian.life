@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "tiziyun"
 description: "深度评测 梯子云：自研全平台客户端一键登录，同时支持第三方通用订阅导入。 涵盖最新套餐价格表、专线优化网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 28
+weight: 28
+brandName: "梯子云"
+isTop10: false
 operationalSince: "2023年"
 lineType: "专线优化"
 protocols: "Shadowsocks / Trojan"

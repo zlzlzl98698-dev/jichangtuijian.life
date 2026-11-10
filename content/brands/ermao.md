@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "ermao"
 description: "深度评测 二猫云：主打高稳定性的中端专线机场，20元档包含130GB流量，实测节点可用率达100%，晚高峰看4K视频流畅。 涵盖最新套餐价格表、双线 BGP + IPLC 专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 7
+weight: 7
+brandName: "二猫云"
+isTop10: true
 operationalSince: "2023年"
 lineType: "双线 BGP + IPLC 专线"
 protocols: "Shadowsocks"

@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "wgetcloud"
 description: "深度评测 WgetCloud：行业知名高端老牌机场，全节点优质专线，59节点平均下载在50MB/s以上，主打高可用商务。 涵盖最新套餐价格表、高端企业级专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 30
+weight: 30
+brandName: "WgetCloud"
+isTop10: false
 operationalSince: "2023年"
 lineType: "高端企业级专线"
 protocols: "Trojan / Shadowsocks"

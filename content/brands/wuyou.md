@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "wuyou"
 description: "深度评测 无忧链接：订阅链接原生兼容主流客户端无需转换，6元轻量起步套餐对学生和新手极为友好。 涵盖最新套餐价格表、直连优化 + 专线中转网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 8
+weight: 8
+brandName: "无忧链接"
+isTop10: true
 operationalSince: "2023年"
 lineType: "直连优化 + 专线中转"
 protocols: "Shadowsocks / VLESS"

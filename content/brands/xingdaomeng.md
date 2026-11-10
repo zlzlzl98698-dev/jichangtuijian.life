@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "xingdaomeng"
 description: "深度评测 星岛梦：2020年开业老牌专线，提供常规月付与不限时大容量流量包，长期不关服口碑良好，测速性能扎实。 涵盖最新套餐价格表、企业级 IPLC 专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 6
+weight: 6
+brandName: "星岛梦"
+isTop10: true
 operationalSince: "2020年"
 lineType: "企业级 IPLC 专线"
 protocols: "Shadowsocks / Trojan"

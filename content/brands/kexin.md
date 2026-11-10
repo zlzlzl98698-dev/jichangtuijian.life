@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "kexin"
 description: "深度评测 可信云：官方诚实标注数据缺口，中立客观，测速可用率较高。 涵盖最新套餐价格表、标准隧道中转网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 18
+weight: 18
+brandName: "可信云"
+isTop10: false
 operationalSince: "2023年"
 lineType: "标准隧道中转"
 protocols: "Shadowsocks"

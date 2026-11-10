@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "shanyue"
 description: "深度评测 闪跃：24元150GB，中高端专线定位，节点带宽充足。 涵盖最新套餐价格表、IPLC 专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 20
+weight: 20
+brandName: "闪跃"
+isTop10: false
 operationalSince: "2023年"
 lineType: "IPLC 专线"
 protocols: "Shadowsocks"

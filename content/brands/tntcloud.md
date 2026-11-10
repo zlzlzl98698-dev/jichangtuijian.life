@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "tntcloud"
 description: "深度评测 TNTCloud：中端性能平衡型机场，适合轻办公与流媒体观看。 涵盖最新套餐价格表、高速中转网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 35
+weight: 35
+brandName: "TNTCloud"
+isTop10: false
 operationalSince: "2023年"
 lineType: "高速中转"
 protocols: "Shadowsocks"

@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "flyingbird"
 description: "深度评测 FlyingBird：知名专线品牌，节点延迟低，晚高峰稳定性有口碑。 涵盖最新套餐价格表、IEPL 专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 32
+weight: 32
+brandName: "FlyingBird"
+isTop10: false
 operationalSince: "2023年"
 lineType: "IEPL 专线"
 protocols: "Shadowsocks"

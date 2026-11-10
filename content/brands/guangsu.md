@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "guangsu"
 description: "光速云万字终极深度测评：2020年运营老牌旗舰专线，IEPL+企业内网双专线架构，年付折合8元/月，致敬斯诺克147永久套餐深度剖析，晚高峰测速、Netflix/Claude解锁实测与专属优惠码AMM。"
 rank: 1
+weight: 1
+brandName: "光速云"
+isTop10: true
 operationalSince: "2020年"
 lineType: "IEPL专线 + 企业级内网专线（双线路架构）"
 protocols: "VLESS / Shadowsocks"

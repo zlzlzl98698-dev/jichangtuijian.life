@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "shanshuiyun"
 description: "深度评测 山水云：月付入门15元100GB，轻量年付88元，历史测试美区下载达 22.5MB/s。 涵盖最新套餐价格表、多地区中转网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 37
+weight: 37
+brandName: "山水云"
+isTop10: false
 operationalSince: "2023年"
 lineType: "多地区中转"
 protocols: "Shadowsocks"

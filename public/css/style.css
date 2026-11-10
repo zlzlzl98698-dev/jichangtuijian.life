@@ -1062,3 +1062,38 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* Top 10 专属视觉强化 */
+.badge-featured {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+}
+
+.badge-top10 {
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  color: #38bdf8;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+}
+
+.rank-top10 {
+  color: var(--accent-cyan);
+  font-weight: 800;
+  font-size: 1rem;
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+}
+
+.top10-highlight {
+  border-color: rgba(6, 182, 212, 0.35);
+  box-shadow: 0 4px 20px -2px rgba(6, 182, 212, 0.08);
+}

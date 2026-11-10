@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "dalaoyun"
 description: "深度评测 大佬云：极低门槛的平民级机场，最低月付仅5.6元享60GB，是备用梯子与轻量浏览外网资料的高性价比选择。 涵盖最新套餐价格表、高密BGP中转专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 5
+weight: 5
+brandName: "大佬云"
+isTop10: true
 operationalSince: "2023年"
 lineType: "高密BGP中转专线"
 protocols: "Shadowsocks"

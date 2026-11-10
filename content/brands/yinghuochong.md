@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "yinghuochong"
 description: "深度评测 萤火虫：IPLC+VLESS原生IP定位，不限速不限设备，支持主流AI工具。 涵盖最新套餐价格表、IPLC + VLESS网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 41
+weight: 41
+brandName: "萤火虫"
+isTop10: false
 operationalSince: "2023年"
 lineType: "IPLC + VLESS"
 protocols: "VLESS"

@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "quanqiu"
 description: "深度评测 全球云：2026年新品牌，测速覆盖亚太主流地区，下载速率达标。 涵盖最新套餐价格表、全球多节点中转网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 21
+weight: 21
+brandName: "全球云"
+isTop10: false
 operationalSince: "2023年"
 lineType: "全球多节点中转"
 protocols: "Shadowsocks"

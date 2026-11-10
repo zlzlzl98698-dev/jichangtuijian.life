@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "lingdongyun"
 description: "深度评测 灵动云：2025年开业专线，全节点VLESS，OpenAI各地区解锁良好，提供单次流量包。 涵盖最新套餐价格表、IEPL + VLESS 专线网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 38
+weight: 38
+brandName: "灵动云"
+isTop10: false
 operationalSince: "2023年"
 lineType: "IEPL + VLESS 专线"
 protocols: "VLESS"

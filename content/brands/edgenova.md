@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "edgenova"
 description: "深度评测 EdgeNova：高速直连与IPLC多线路自动分配，提供年付小包与新用户8折优惠。 涵盖最新套餐价格表、高速直连 / IPLC网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 40
+weight: 40
+brandName: "EdgeNova"
+isTop10: false
 operationalSince: "2023年"
 lineType: "高速直连 / IPLC"
 protocols: "Shadowsocks / Trojan"

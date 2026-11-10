@@ -40,7 +40,7 @@
 
 <!-- 核心主推特权卡 (光速云) -->
 <section class="featured-card">
-  <div class="featured-card-badge">⭐ 2026 综合旗舰首选推荐</div>
+  <div class="featured-card-badge">⭐ 2026 综合旗舰首选推荐 (TOP 1)</div>
   <div class="featured-content">
     <div>
       <div class="featured-title">
@@ -83,14 +83,14 @@
   </div>
 </section>
 
-<!-- 42 家机场品牌横评大厅 -->
+<!-- 42 家机场品牌横评大厅 (严格排序：前十优先) -->
 <section style="margin-bottom: 3.5rem;">
   <div class="section-title-wrap">
     <div class="section-title">
-      <span>🌐</span> 42 家主流机场品牌性能评测矩阵
+      <span>🌐</span> 42 家主流机场品牌性能评测矩阵（前十核心推荐）
     </div>
     <div style="font-size:0.85rem;color:var(--text-dim);font-family:var(--font-mono);">
-      按照运营口碑、专线质量与性价比综合排序
+      按照运营口碑、专线质量与性价比严格排序
     </div>
   </div>
 
@@ -104,8 +104,10 @@
   </div>
 
   <div class="brand-grid">
-    {{ range (where .Site.RegularPages "Section" "brands") }}
-    <div class="brand-card" 
+    {{ $brands := where .Site.RegularPages "Section" "brands" }}
+    {{ $brands = where $brands "Params.rank" "ge" 1 }}
+    {{ range (sort $brands "Params.rank" "asc") }}
+    <div class="brand-card {{ if .Params.isTop10 }}top10-highlight{{ end }}" 
          data-status="{{ .Params.dataStatus | default "vendor" }}" 
          data-line="{{ .Params.lineType | default "" }}" 
          data-price="{{ .Params.startingPriceNum | default 20 }}"
@@ -114,8 +116,15 @@
       <div>
         <div class="brand-card-header">
           <div>
-            <span class="brand-rank">#{{ .Params.rank | default "评测" }}</span>
-            <h3 class="brand-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.25rem;">
+              <span class="brand-rank {{ if .Params.isTop10 }}rank-top10{{ end }}">#{{ printf "%02d" .Params.rank }}</span>
+              {{ if eq .Params.rank 1 }}
+              <span class="badge-featured">⭐ 第一主推</span>
+              {{ else if .Params.isTop10 }}
+              <span class="badge-top10">TOP 10 推荐</span>
+              {{ end }}
+            </div>
+            <h3 class="brand-name"><a href="{{ .Permalink }}">{{ .Params.brandName | default .Title }}</a></h3>
           </div>
           <span class="status-badge {{ if eq .Params.dataStatus "measured" }}status-measured{{ else }}status-vendor{{ end }}">
             {{ if eq .Params.dataStatus "measured" }}实测数据{{ else }}官方宣称{{ end }}

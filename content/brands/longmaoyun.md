@@ -5,6 +5,9 @@ lastmod: 2026-11-10T10:00:00+08:00
 slug: "longmaoyun"
 description: "深度评测 龙猫云：性价比中转梯队，节点丰富，适合日常浏览与追剧。 涵盖最新套餐价格表、BGP 中转网络延迟表现、流媒体及ChatGPT解锁实测与专属优惠码。"
 rank: 33
+weight: 33
+brandName: "龙猫云"
+isTop10: false
 operationalSince: "2023年"
 lineType: "BGP 中转"
 protocols: "Shadowsocks"
